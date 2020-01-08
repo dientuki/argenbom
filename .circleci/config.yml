@@ -142,7 +142,7 @@ jobs:
           command: scp build.tar.gz mateclass@mateclass.com:argenbom
       - run:
           name: Untar
-          command: ssh mateclass@mateclass.com tar -xzf argenbom/build.tar.gz -C vpp
+          command: ssh mateclass@mateclass.com tar -xzf argenbom/build.tar.gz -C argenbom
       - run:
           name: Clean build.tar.gz
           command: ssh mateclass@mateclass.com rm -rf argenbom/build.tar.gz
