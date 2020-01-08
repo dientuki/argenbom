@@ -1,5 +1,8 @@
 wd: &wd
-  working_directory: ~/vpp
+  working_directory: ~/argenbom
+
+themeMk1: &themeMk1
+  working_directory: ~/argenbom/wp-content/themes/argenbom-mk1
 
 php: &php
   docker:
@@ -23,7 +26,7 @@ jobs:
       - save_cache:
           key: checkout-cache-{{ .Branch }}-{{ .Environment.CIRCLE_SHA1 }}
           paths:
-            - ~/vpp
+            - ~/argenbom
 
   php_checks:
     <<: *wd
@@ -43,7 +46,7 @@ jobs:
 
   install_webpack:
       <<: *node
-      <<: *wd
+      <<: *themeMk1
       steps:
         - restore_cache:
             key: checkout-cache-{{ .Branch }}-{{ .Environment.CIRCLE_SHA1 }}
@@ -57,7 +60,7 @@ jobs:
 
   frontend_tests:
     <<: *node
-    <<: *wd
+    <<: *themeMk1
     steps:
       - restore_cache:
           key: checkout-cache-{{ .Branch }}-{{ .Environment.CIRCLE_SHA1 }}      
@@ -65,17 +68,14 @@ jobs:
           key: dependency-cache-node-{{ checksum "package.json" }}
       - run:
           name: Linter Javascript
-          command: npm run eslint:js       
-      - run:
-          name: Linter Javascript eXtended
-          command: npm run eslint:jsx
+          command: npm run eslint
       - run:
           name: Linter CSS
           command: npm run stylelint              
 
   build_webpack:
     <<: *node
-    <<: *wd
+    <<: *themeMk1
     steps:
       - restore_cache:
           key: checkout-cache-{{ .Branch }}-{{ .Environment.CIRCLE_SHA1 }}      
@@ -84,51 +84,10 @@ jobs:
       - run:
           name: Building public assets
           command: npm run prod
-      - run:
-          name: Building svg files
-          command: npm run svg          
       - save_cache:
           key: public-assets-{{ .Branch }}-{{ .Environment.CIRCLE_SHA1 }}
           paths:
-            - public/dist
-  
-  install_laravel:
-    <<: *php
-    <<: *wd
-    steps:
-      - restore_cache:
-          key: checkout-cache-{{ .Branch }}-{{ .Environment.CIRCLE_SHA1 }}
-      - run:
-          name: Install exiftool
-          command: |
-            sudo apt-get update
-            sudo apt-get install exiftool
-            sudo docker-php-ext-configure exif
-            sudo docker-php-ext-install exif
-      - run:
-          name: Install Laravel with Autoloader Optimization
-          command: composer install --optimize-autoloader --no-dev
-      - save_cache:
-          key: laravel-install-{{ .Branch }}-{{ .Environment.CIRCLE_SHA1 }}
-          paths:
-            - ./      
-
-  optimize_laravel:
-    <<: *php
-    <<: *wd
-    steps:
-      - restore_cache:
-          key: laravel-install-{{ .Branch }}-{{ .Environment.CIRCLE_SHA1 }}
-      - run:
-          name: Optimizing Configuration Loading
-          command: php artisan config:cache
-      - run:
-          name: Optimizing Route Loading
-          command: php artisan route:cache       
-      - save_cache:
-          key: laravel-{{ .Branch }}-{{ .Environment.CIRCLE_SHA1 }}
-          paths:
-            - ./              
+            - dist
 
   build_targz:
     <<: *wd
@@ -140,24 +99,20 @@ jobs:
           key: public-assets-{{ .Branch }}-{{ .Environment.CIRCLE_SHA1 }}
       - run:
           name: Add new version.txt
-          command: echo commit-$(git rev-parse --short HEAD) >  ./public/_version.txt
+          command: echo commit-$(git rev-parse --short HEAD) >  ./_version.txt
       - run:
           name: Remove files
           command: |
             rm -rf .circleci
-            rm -rf .env.*
+            rm -rf scripts
+            cd wp-content/themes/argenbom-mk1
+            rm -rf .babelrc
             rm -rf .eslintrc.json
-            rm -rf database
-            rm -rf tests
             rm -rf webpack
-            rm -rf composer.*
             rm -rf package.json
             rm -rf package-lock.json
-            rm -rf phpunit.xml
             rm -rf postcss.config.js
             rm -rf stylelint.json
-            rm -rf scripts
-            rm -rf bootstrap/cache/config.php
       - run:
           name: Making build.tar.gz
           command: |
@@ -186,17 +141,13 @@ jobs:
             echo $KNOW_HOST_2 >> ~/.ssh/known_hosts    
       - run:
           name: Uploading build.tar.gz
-          command: scp build.tar.gz mateclass@mateclass.com:vpp
+          command: scp build.tar.gz mateclass@mateclass.com:argenbom
       - run:
           name: Untar
-          command: ssh mateclass@mateclass.com tar -xzf vpp/build.tar.gz -C vpp
+          command: ssh mateclass@mateclass.com tar -xzf argenbom/build.tar.gz -C vpp
       - run:
           name: Clean build.tar.gz
-          command: ssh mateclass@mateclass.com rm -rf vpp/build.tar.gz
-      - run:
-          name: Clean permisions
-          command: | 
-            ssh mateclass@mateclass.com chmod 777 -fR vpp/storage || :
+          command: ssh mateclass@mateclass.com rm -rf argenbom/build.tar.gz
 
   release:
     <<: *wd
@@ -268,19 +219,6 @@ workflows:
           filters:
             branches:
               only: master
-      - install_laravel:
-          requires:
-            - checkout_code        
-          filters:
-            branches:
-              only: master
-      - optimize_laravel:
-          requires:
-            - install_laravel
-            - php_checks
-          filters:
-            branches:
-              only: master
       - build_targz:
           requires:
             - optimize_laravel
@@ -334,24 +272,7 @@ workflows:
             tags:
               only: /^v.*/
             branches:
-              ignore: /.*/   
-      - install_laravel:
-          requires:
-            - checkout_code        
-          filters:
-            tags:
-              only: /^v.*/
-            branches:
-              ignore: /.*/   
-      - optimize_laravel:
-          requires:
-            - install_laravel
-            - php_checks
-          filters:
-            tags:
-              only: /^v.*/
-            branches:
-              ignore: /.*/   
+              ignore: /.*/
       - build_targz:
           requires:
             - optimize_laravel
