@@ -11,6 +11,6 @@ if ('IntersectionObserver' in window) {
   lzl.init(settings_lzl);
 } else {
   import(/* webpackChunkName: "lzlVanilla" */ './modules/lazyload/vanilla').then((module) => {
-      module.vanilla(settings_lzl);
+    module.vanilla(settings_lzl);
   });
 }
