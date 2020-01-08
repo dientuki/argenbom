@@ -219,6 +219,7 @@ workflows:
               only: master
       - build_targz:
           requires:
+            - php_checks
             - frontend_tests
             - build_webpack     
           filters:
@@ -272,6 +273,7 @@ workflows:
               ignore: /.*/
       - build_targz:
           requires:
+            - php_checks
             - frontend_tests
             - build_webpack     
           filters:
