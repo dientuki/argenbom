@@ -94,8 +94,6 @@ jobs:
     <<: *ubuntu
     steps:
       - restore_cache:
-          key: laravel-{{ .Branch }}-{{ .Environment.CIRCLE_SHA1 }}
-      - restore_cache:
           key: public-assets-{{ .Branch }}-{{ .Environment.CIRCLE_SHA1 }}
       - run:
           name: Add new version.txt
@@ -221,7 +219,6 @@ workflows:
               only: master
       - build_targz:
           requires:
-            - optimize_laravel
             - frontend_tests
             - build_webpack     
           filters:
@@ -275,7 +272,6 @@ workflows:
               ignore: /.*/
       - build_targz:
           requires:
-            - optimize_laravel
             - frontend_tests
             - build_webpack     
           filters:
