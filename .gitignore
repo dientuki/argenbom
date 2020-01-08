@@ -23,4 +23,8 @@ node_modules/
 *.sql
 *.sqlite
 
+# ignore PHP storm
 *.idea/*
+
+# ignore theme compiled
+wp-content/themes/*/dist/*
