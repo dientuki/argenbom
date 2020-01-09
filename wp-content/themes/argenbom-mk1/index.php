@@ -1,3 +1,5 @@
-<?php get_header(); ?>
+		<?php get_header(); ?>
 
-<?php get_footer();
+		hola mundo en blanco y vacio
+
+		<?php get_footer();
