@@ -94,7 +94,7 @@ jobs:
     <<: *ubuntu
     steps:
       - restore_cache:
-          key: checkout-cache-{{ .Branch }}-{{ .Environment.CIRCLE_SHA1 }}      
+          key: checkout-cache-{{ .Branch }}-{{ .Environment.CIRCLE_SHA1 }}
       - restore_cache:
           key: public-assets-{{ .Branch }}-{{ .Environment.CIRCLE_SHA1 }}
       - run:
