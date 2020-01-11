@@ -52,7 +52,7 @@
   height: 0;
   position: relative;
   display: block;
-  background: $placeholder url(../images/placeholder.svg) no-repeat center center;
+  background: $placeholder url("../images/placeholder.svg") no-repeat center center;
   background-size: 60% auto;
   overflow: hidden;
   z-index: 0;
