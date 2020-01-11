@@ -15,11 +15,11 @@ class column_widget extends WP_Widget {
 
   public function widget($args, $instance) {
     extract( $args );
-    $posts = array();
+    $columns = array();
     foreach ($instance as $key => $value) {
-      $posts[] = get_post($value);
+      $columns[] = get_post($value);
     }
-    set_query_var('posts', $posts);
+    set_query_var('columns', $columns);
     get_template_part('widgets/column', 'widget');
   }
 
