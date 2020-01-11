@@ -8,8 +8,18 @@
 
 		<link rel="profile" href="https://gmpg.org/xfn/11">
 
-		<?php wp_head(); ?>
+    <?php wp_head(); ?>
+    
+    <link rel="stylesheet" type="text/css" href="<?php echo load_resource('appCss.css'); ?>" >
 
 	</head>
 
-	<body <?php body_class(); ?>>
+  <body <?php body_class(); ?>>
+  
+    <?php if (is_front_page() == false): ?>
+
+      <header>
+        header!!
+      </header>
+
+    <?php endif; ?>  

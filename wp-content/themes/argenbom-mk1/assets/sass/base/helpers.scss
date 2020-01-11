@@ -7,12 +7,12 @@
 .visuallyhidden {
   border: 0;
   clip: rect(0 0 0 0);
-  height: (1em/$fs);
-  margin: (-1em/$fs);
+  height: em(1);
+  margin: em(-1);
   overflow: hidden;
   padding: 0;
   position: absolute;
-  width: (1em/$fs);
+  width: em(1);
 
   &.focusable {
     &:active,
@@ -41,25 +41,16 @@
   clear: both;
 }
 
-[class *= ico-] {
-  width: auto;
-  height: auto;
-}
-
 [class *= aspect-] {
   margin: 0;
   width: 100%;
   height: 0;
   position: relative;
   display: block;
-  background: $placeholder url("../images/placeholder.svg") no-repeat center center;
+  background: map-get($colors, "black");
   background-size: 60% auto;
   overflow: hidden;
   z-index: 0;
-
-  .brick:first-of-type & {
-    background-image: none;
-  }
 
   img,
   iframe {
@@ -68,14 +59,6 @@
     left: 0;
     width: 100%;
     height: 100%;
-  }
-
-  .error {
-    $tfs:12;
-    font-size: #{$tfs/$fs}em;
-    box-sizing: border-box;
-    padding: (10em/$tfs);
-    color: $hr;
   }
 }
 
