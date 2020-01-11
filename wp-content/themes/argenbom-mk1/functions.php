@@ -3,7 +3,7 @@
 define('ARGENBOMMK1_THEME_FOLDER_PATH', trailingslashit(get_template_directory(__FILE__)));
 
 function load_resource($resource, $url = true) {
-  $manifest = file_get_contents(public_path('/dist/manifest.json'));
+  $manifest = file_get_contents(ARGENBOMMK1_THEME_FOLDER_PATH . 'dist/manifest.json');
 
   if ($manifest == false) {
     return false;
@@ -18,9 +18,9 @@ function load_resource($resource, $url = true) {
 
     if ($path == $resource) {
       if ($url) {
-        $file = url('/dist/'.$value);
+        $file = get_template_directory_uri() . '/dist/' .$value;
       } else {
-        $file = public_path('/dist/' . $value);
+        $file = ARGENBOMMK1_THEME_FOLDER_PATH . 'dist/' . $value;
       }
 
       return $file;
@@ -40,7 +40,7 @@ function load_critical_css($file = false) {
 
 function load_svg($file) {
   $folder = '/dist/svg/';
-  $filename = public_path($folder . $file . '.svg');
+  $filename = ARGENBOMMK1_THEME_FOLDER_PATH . $folder . $file . '.svg';
 
   if (file_exists($filename)) {
     return file_get_contents($filename, FILE_USE_INCLUDE_PATH);

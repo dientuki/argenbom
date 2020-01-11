@@ -8,7 +8,9 @@
 
 		<link rel="profile" href="https://gmpg.org/xfn/11">
 
-		<?php wp_head(); ?>
+    <?php wp_head(); ?>
+    
+    <link rel="stylesheet" type="text/css" href="<?php echo load_resource('appCss.css'); ?>" >
 
 	</head>
 

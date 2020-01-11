@@ -4,12 +4,9 @@
 
 @import "base/normalize.scss";
 @import "base/helpers.scss";
-@import "base/font-face.scss";
+//@import "base/font-face.scss";
 
 @import "layout/layout.scss";
 
+@import "modules/widgets.scss";
 @import "modules/footer.scss";
-
-body {
-  color: #fff;
-}
