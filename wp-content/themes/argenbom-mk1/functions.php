@@ -46,3 +46,55 @@ function load_svg($file) {
 
   return false;
 }
+
+function argenbom_mk1_theme_support() {
+  
+}
+
+add_action( 'after_setup_theme', 'argenbom_mk1_theme_support' );
+
+/**
+ * Register navigation menus uses wp_nav_menu in five places.
+ */
+function argenbom_mk1_menus() {
+
+	$locations = array(
+		'primary'  => 'Header Menu',
+		'footer'   => 'Footer Menu',
+		'social'   => 'Social Menu'
+	);
+
+	register_nav_menus( $locations );
+}
+
+add_action( 'init', 'argenbom_mk1_menus' );
+
+/**
+ * Filter the CSS class for a nav menu based on a condition.
+ *
+ * @param array  $classes The CSS classes that are applied to the menu item's <li> element.
+ * @param object $item    The current menu item.
+ * @return array (maybe) modified nav menu class.
+ */
+function argenbom_nav_class( $classes, $item, $args ) {
+  //die($item->url);
+  //die(print_r($args));
+  $classes = array();
+
+  if ($args->theme_location === 'social') {
+    $classes[] = $item->title;
+  }
+
+  $classes[] = $args->menu_class . '__item';
+
+  return $classes;
+}
+
+add_filter( 'nav_menu_css_class' , 'argenbom_nav_class' , 10, 3 );
+
+function add_menu_link_class( $atts, $item, $args ) {
+  $atts['class'] = $args->menu_class . '__link';
+
+  return $atts;
+}
+add_filter( 'nav_menu_link_attributes', 'add_menu_link_class', 1, 3 );
