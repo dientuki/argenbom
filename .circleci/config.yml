@@ -189,6 +189,12 @@ workflows:
           filters:
             branches:
               ignore: master    
+      - build_webpack:
+          requires:
+            - install_webpack        
+          filters:
+            branches:
+              ignore: master         
   merge_master:
     jobs:
       - checkout_code:
