@@ -28,3 +28,6 @@ node_modules/
 
 # ignore theme compiled
 wp-content/themes/*/dist/*
+
+# the config
+wp-config.php
