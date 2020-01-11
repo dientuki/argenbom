@@ -21,7 +21,6 @@ class service_widget extends WP_Widget {
 
 	public function form( $instance ) {
     //Defaults
-     echo print_r($instance);
 		$instance = wp_parse_args(
 			(array) $instance,
 			array(
@@ -30,7 +29,7 @@ class service_widget extends WP_Widget {
 		);
 		?>
 		<p>
-			<label for="<?php echo $this->get_field_id( 'parent_page' ); ?>"></label>
+			<label for="<?php echo $this->get_field_id( 'parent_page' ); ?>">Pagina de servicios:</label>
 			<select name="<?php echo $this->get_field_name( 'parent_page' ); ?>" id="<?php echo $this->get_field_id( 'parent_page' ); ?>" class="widefat">
         <?php 
           $pages = get_pages(array('parent' => 0)); 
