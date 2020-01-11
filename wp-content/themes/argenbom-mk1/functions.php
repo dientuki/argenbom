@@ -91,6 +91,7 @@ add_action( 'widgets_init', 'argenbom_mk1_widget_area_registration' );
 //lets load the custom widget
 require_once (ARGENBOMMK1_THEME_FOLDER_PATH . 'widgets/class.service-widget.php');
 require_once (ARGENBOMMK1_THEME_FOLDER_PATH . 'widgets/class.column-widget.php');
+require_once (ARGENBOMMK1_THEME_FOLDER_PATH . 'widgets/class.news-widget.php');
 
 /**
  * Filter the CSS class for a nav menu based on a condition.
