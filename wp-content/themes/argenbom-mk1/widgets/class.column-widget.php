@@ -7,7 +7,7 @@ class column_widget extends WP_Widget {
       // Base ID of your widget
       'column_widget', 
       // Widget name will appear in UI
-      'Nosecomollamarloaca', 
+      'Columnas', 
       // Widget description
       array( 'description' => "Muestra los servicios") 
     );

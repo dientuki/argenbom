@@ -5,12 +5,22 @@
     <?php foreach ($columns as $column): ?>
 
       <article class="widget-column__article">
-        <figure></figure>
-        <h1><?php echo $column->post_title ?></h1>
-        <div>
-          <?php echo apply_filters( 'the_content', $column->post_content ); ?>
+        
+        <div class="widget-column__image">       
+          <figure class="aspect-column">
+            <img />
+          </figure>
         </div>
-        <a href="" class="more-info">info</a>
+
+        <div class="widget-column__content">
+          <div class="widget-column__content-wrapper">
+            <h1 class="widget-column__title"><?php echo $column->post_title ?></h1>
+            <div class="widget-column__text">
+              <?php echo apply_filters( 'the_content', $column->post_content ); ?>
+            </div>
+            <a href="<?php echo get_permalink($column->ID); ?>" class="more-info more-info-blue">info</a>
+          </div>
+        </div>
       </article>
 
     <?php endforeach; ?>

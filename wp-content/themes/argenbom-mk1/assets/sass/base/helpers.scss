@@ -70,6 +70,10 @@
   padding-bottom: (9%/16*100);
 }
 
+.aspect-column {
+  padding-bottom: (310%/610*100);
+}
+
 .blured {
   background-image: none;
 
@@ -110,5 +114,23 @@
 
   &:before {
     color: map-get($colors, "green");
+  }
+}
+
+.more-info-blue {
+  border-color: map-get($colors, "white");
+  color: map-get($colors, "white");
+
+  &:before {
+    color: map-get($colors, "green");
+  }
+}
+
+.more-info-green {
+  border-color: map-get($colors, "white");
+  color: map-get($colors, "white");
+
+  &:before {
+    color: map-get($colors, "blue");
   }
 }
