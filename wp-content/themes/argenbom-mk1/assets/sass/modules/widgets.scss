@@ -5,3 +5,23 @@
 .widget-column {
   background: map-get($colors, "blue");
 }
+
+.widget-news {
+  padding: rem(32) 0 rem(52) 0;
+  .wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  &__deco {
+    flex-basis: rem(150);
+    height: rem(150);
+    background: map-get($colors, "green");
+    border-radius: 10rem;
+  }
+
+  &__info {
+    flex-basis: rem(180);
+  }  
+}
