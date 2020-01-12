@@ -87,3 +87,28 @@
     transform: scale(1);
   }
 }
+
+.more-info {
+  border: solid rem(1);
+  height: rem(30);
+  line-height: rem(30);
+  padding: 0 rem(22);
+  text-transform: uppercase;
+  border-radius: rem(9);
+  text-decoration: none;
+  font-weight: map-get($font-weight, "bold");
+  display: inline-block;
+
+  &:before {
+    content: "+ ";
+  }
+}
+
+.more-info-white {
+  border-color: map-get($colors, "blue");
+  color: map-get($colors, "blue");
+
+  &:before {
+    color: map-get($colors, "green");
+  }
+}
