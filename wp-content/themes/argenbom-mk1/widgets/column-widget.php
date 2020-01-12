@@ -10,7 +10,7 @@
         <div>
           <?php echo apply_filters( 'the_content', $column->post_content ); ?>
         </div>
-        <a href="" class="more-info">info</a>
+        <a href="" class="more-info more-info-white">info</a>
       </article>
 
     <?php endforeach; ?>
