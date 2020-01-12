@@ -1,5 +1,14 @@
 .widget-service {
   background: map-get($colors, "green");
+  color: map-get($colors, "white");
+
+  &__list-link {
+    color: map-get($colors, "white");
+  }
+
+  &__title {
+    color: map-get($colors, "white");
+  }
 }
 
 .widget-column {
@@ -82,6 +91,5 @@
 
   &__title {
     color: map-get($colors, "green");
-    text-transform: uppercase;
   }
 }
