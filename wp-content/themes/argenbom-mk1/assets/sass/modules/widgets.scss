@@ -4,6 +4,52 @@
 
 .widget-column {
   background: map-get($colors, "blue");
+  color: map-get($colors, "white");
+
+  &__article {
+    display: flex;
+  }
+
+  &__image {
+    flex-basis: (610%/1440) * 100;
+    position: relative;
+
+    &:before {
+      width: rem(150);
+      height: rem(150);
+      content: "";
+      background: map-get($colors, "green");
+      right: rem(-75);
+      top: 50%;
+      transform: translateY(-50%);
+      position: absolute;
+      z-index: 90;
+      border-radius: 100em;
+    }
+  }
+
+  &__content {
+    flex-basis: (830%/1440) * 100;
+    position: relative;
+  }
+
+  &__content-wrapper {
+    display: flex;
+    padding: 0 rem(115);
+    flex-wrap: wrap;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &__title,
+  &__text {
+    flex-basis: 100%;
+  }
+
+  &__title {
+    color: map-get($colors, "green");
+  }
 }
 
 .widget-news {
