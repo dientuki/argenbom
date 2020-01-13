@@ -156,3 +156,52 @@
     color: map-get($colors, "green");
   }
 }
+
+.widget-tactic {
+  padding: rem(22) 0 rem(44) 0;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: calc(100% - #{rem(130)});
+  }
+
+  &__item {
+    max-width: rem(320);
+    min-width: rem(320);
+    text-align: center;
+  }
+
+  &__image-wrapper {
+    height: rem(100);
+    position: relative;
+    
+    &:before {
+      width: rem(100);
+      height: 100%;
+      background: map-get($colors, "green");
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 0;
+      content: "";
+      border-radius: 100rem;
+      z-index: 6;
+    }
+  }
+
+  &__image {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    top: 50%;
+    z-index: 8;
+  }
+
+  &__title {
+    color: map-get($colors, "blue");
+    margin-top: rem(20);
+  }
+
+}
