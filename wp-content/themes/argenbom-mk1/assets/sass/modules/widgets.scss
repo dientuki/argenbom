@@ -1,6 +1,7 @@
 .widget-service {
   background: map-get($colors, "green");
   color: map-get($colors, "white");
+  padding: rem(70) 0;
 
   &__container {
     width: calc(100% - #{rem(63 * 2)});
@@ -14,12 +15,62 @@
     width: calc(50% - #{rem( 35/2 )});
   }
 
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__list-item {
+    width: calc(50% - #{rem( 35/2 )});
+    margin-top: rem(60);
+    padding-left: rem(76);
+    position: relative;
+
+    &:before {
+      width: rem(57);
+      height: rem(57);
+      position: absolute;
+      left: 0;
+      top: rem(-10);
+      content: "";
+      background: map-get($colors, "white");
+      border-radius: 100rem;
+    }
+
+    &:nth-child(-n+2) {
+      margin-top: rem(30);
+    }
+  }
+
   &__list-link {
     color: map-get($colors, "white");
+    display: block;
+    margin-bottom: rem(25);
   }
 
   &__title {
-    color: map-get($colors, "white");
+    color: map-get($colors, "blue");
+    margin-bottom: rem(30);
+  }
+
+  &__content {
+    li {
+      position: relative;
+      padding-left: 1em;
+      font-size: rem(20);
+
+      &:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 1em;
+        height: 1em;
+        content: "+";
+        color: map-get($colors, "blue");
+        font-weight: map-get($font-weight, "bold");
+      }
+    }
   }
 }
 
