@@ -6,7 +6,7 @@
         
       </div>
       <div class="widget-news__text">
-        <div class="widget-news__title uppercase"><?php echo $news['title']; ?></div>
+        <div class="widget-news__title uppercase bold"><?php echo $news['title']; ?></div>
         <div class="widget-news__desc"><?php echo $news['text']; ?></div>
       </div>
       <div class="widget-news__more">
