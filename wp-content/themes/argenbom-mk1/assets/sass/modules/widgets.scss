@@ -2,6 +2,18 @@
   background: map-get($colors, "green");
   color: map-get($colors, "white");
 
+  &__container {
+    width: calc(100% - #{rem(63 * 2)});
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__article,
+  &__list {
+    width: calc(50% - #{rem( 35/2 )});
+  }
+
   &__list-link {
     color: map-get($colors, "white");
   }
@@ -73,7 +85,7 @@
   }
 
   &__deco {
-    flex-basis: rem(150);
+    min-width: rem(150);
     height: rem(150);
     background: map-get($colors, "green");
     border-radius: 10rem;
@@ -85,7 +97,7 @@
   }
 
   &__more {
-    flex-basis: rem(180);
+    min-width: rem(180);
     text-align: right;
   }
 

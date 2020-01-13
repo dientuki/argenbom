@@ -78,6 +78,10 @@
   text-transform: uppercase;
 }
 
+.bold {
+  font-weight: map-get($font-weight, "bold");
+}
+
 .blured {
   background-image: none;
 
