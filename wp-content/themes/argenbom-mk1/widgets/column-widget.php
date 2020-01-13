@@ -3,12 +3,19 @@
   <div class="wrapper">
     
     <?php foreach ($columns as $column): ?>
-
+      
       <article class="widget-column__article">
         
-        <div class="widget-column__image">       
+        <div class="widget-column__image">
           <figure class="aspect-column">
-            <img />
+            <?php $images = get_attached_media('image', $column->ID); ?>
+            <?php if (count($images) > 0): ?>
+              <?php
+                $imageObejct = array_values($images)[0];
+                $image = wp_get_attachment_image_src($imageObejct->ID, 'full'); ?>
+              <img data-original="<?php echo $image[0]; ?>" class="lzl" src="" />
+            <?php endif; ?>  
+            
           </figure>
         </div>
 
