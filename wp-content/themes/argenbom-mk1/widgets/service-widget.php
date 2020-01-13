@@ -1,4 +1,4 @@
-<?php $pages = new WP_Query( array('post_parent' => 2, 'post_type' => 'page')) ;?>
+<?php $pages = new WP_Query( array('post_parent' => $parent_page->ID, 'post_type' => 'page')) ;?>
 
 <section class="widget-service">
 

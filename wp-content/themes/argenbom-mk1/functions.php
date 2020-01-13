@@ -50,7 +50,7 @@ function load_svg($file) {
 }
 
 function argenbom_mk1_theme_support() {
-  
+  add_theme_support( 'post-thumbnails', array( 'page' ) );
 }
 
 add_action( 'after_setup_theme', 'argenbom_mk1_theme_support' );
@@ -77,7 +77,7 @@ function argenbom_mk1_widget_area_registration() {
     array(
       'name'        => "Front Page",
       'id'          => 'front-page',
-      'description' => "desc",
+      'description' => "Widgets de la home",
       'before_title'  => '',
       'after_title'   => '',
       'before_widget' => '',
@@ -92,6 +92,7 @@ add_action( 'widgets_init', 'argenbom_mk1_widget_area_registration' );
 require_once (ARGENBOMMK1_THEME_FOLDER_PATH . 'widgets/class.service-widget.php');
 require_once (ARGENBOMMK1_THEME_FOLDER_PATH . 'widgets/class.column-widget.php');
 require_once (ARGENBOMMK1_THEME_FOLDER_PATH . 'widgets/class.news-widget.php');
+require_once (ARGENBOMMK1_THEME_FOLDER_PATH . 'widgets/class.tactic-widget.php');
 
 /**
  * Filter the CSS class for a nav menu based on a condition.
