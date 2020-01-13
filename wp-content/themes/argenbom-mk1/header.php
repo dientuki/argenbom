@@ -10,8 +10,9 @@
 
     <?php wp_head(); ?>
     
-    <link rel="stylesheet" type="text/css" href="<?php echo load_resource('appCss.css'); ?>" >
-    <link rel="preload" href="<?php echo load_resource('myriadpro-regular.woff2'); ?>" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" type="text/css" href="<?php echo load_resource('appCss.css'); ?>" />
+    <link rel="preload" href="<?php echo load_resource('myriadpro-regular.woff2'); ?>" as="font" type="font/woff2" crossorigin />
+    <script defer src="<?php echo load_resource('appJs.js'); ?>"></script>
 
 	</head>
 
