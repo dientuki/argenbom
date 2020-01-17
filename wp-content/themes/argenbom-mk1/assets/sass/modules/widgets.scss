@@ -127,10 +127,11 @@
 
   &__title {
     color: map-get($colors, "green");
+    font-size: rem(27);
   }
 
   &__text {
-   font-family: myriadpro-light;    
+    font-family: myriadpro-light;
   }
 }
 
@@ -155,7 +156,7 @@
   &__text {
     padding: 0 rem(120) 0 rem(40);
     flex-grow: 1;
-    font-family: myriadpro-light;    
+    font-family: myriadpro-light;
   }
 
   &__more {
