@@ -178,7 +178,7 @@
     position: relative;
 
     &:before {
-      width: rem(100);
+      width: rem(105);
       height: 100%;
       background: map-get($colors, "green");
       position: absolute;
@@ -201,6 +201,14 @@
 
   &__title {
     color: map-get($colors, "blue");
-    margin-top: rem(20);
+    margin-top: rem(25);
+    font-size: rem(17);
+  }
+
+  &__text {
+    margin-top: rem(2);
+    font-size: rem(18);
+    line-height: rem(21);
+    @include clamp(2);
   }
 }
