@@ -86,6 +86,13 @@
 
   &__article {
     display: flex;
+    border-top: solid rem(1) map-get($colors, "grey");
+  }
+
+  .widget-column__article {
+    &:first-child {
+      border: none;
+    }
   }
 
   &__image {
@@ -132,6 +139,8 @@
 
   &__text {
     font-family: myriadpro-light;
+    font-size: rem(20);
+    margin: rem(5) 0 rem(10) 0;
   }
 }
 
@@ -166,6 +175,8 @@
 
   &__title {
     color: map-get($colors, "green");
+    font-size: rem(27);
+    margin-bottom: rem(5);
   }
 }
 
