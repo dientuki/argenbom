@@ -6,3 +6,12 @@
   font-style: normal;
   font-display: swap;
 }
+
+@font-face {
+  font-family: myriadpro-light;
+  src: url("../fonts/myriadpro-light.woff2") format("woff2"),
+    url("../fonts/myriadpro-light.woff") format("woff");
+  font-weight: map-get($font-weight, "normal");
+  font-style: normal;
+  font-display: swap;
+}

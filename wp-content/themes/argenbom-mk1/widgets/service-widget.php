@@ -14,9 +14,9 @@
       <ul class="widget-service__list">
         <?php while ( $pages->have_posts() ): $pages->the_post(); ?>
           <li class="widget-service__list-item">
-            <a class="widget-service__list-link uppercase" href="<?php echo the_permalink(); ?>"><?php echo the_title(); ?></a>
+            <a class="widget-service__list-link uppercase bold" href="<?php echo the_permalink(); ?>"><?php echo the_title(); ?></a>
             <a class="more-info more-info-green uppercase" href="<?php echo the_permalink(); ?>">info</a>
-          </li>                                              
+          </li>                                                                                            
         <?php endwhile; ?>
       </ul>
     </div>
