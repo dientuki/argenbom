@@ -1,3 +1,25 @@
 .footer {
   background: map-get($colors, "blue");
+  height: rem(90);
+  color: map-get($colors, "white");
+
+  .wrapper {
+    height: 100%;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: calc(100% - #{rem(290)});
+    margin: auto 0;
+  }
+
+  &__contact-info {
+    font-size: rem(14);
+    letter-spacing: rem(1);
+    word-spacing: rem(4);
+    font-weight: map-get($font-weight, "bold");
+  }
 }
