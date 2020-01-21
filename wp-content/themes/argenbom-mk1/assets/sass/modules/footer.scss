@@ -23,3 +23,26 @@
     font-weight: map-get($font-weight, "bold");
   }
 }
+
+.menu-social {
+  &__item {
+    float: left;
+    width: rem(34);
+    height: rem(34);
+    background: map-get($colors, "green");
+    border-radius: 50rem;
+    margin-left: rem(20);
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+
+  &__link {
+    overflow: hidden;
+    text-indent: -90rem;
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+}
