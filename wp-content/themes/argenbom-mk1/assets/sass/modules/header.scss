@@ -1,0 +1,73 @@
+.header {
+  height: rem(215);
+  background: map-get($colors, "white");
+  position: relative;
+
+  &:before {
+    height: rem(95);
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: "";
+    background: map-get($colors, "blue");
+  }
+
+  &__logo {
+    width: rem(130);
+    height: rem(130);
+    position: absolute;
+    left: rem(100);
+    top: rem(27);
+    background: map-get($colors, "white");
+    border-radius: 100rem;
+    overflow: hidden;
+    box-shadow: 0 0 rem(10) rem(1) rgba(map-get($colors, "black"), 1);
+  }
+
+  &-menu {
+    height: 100%;
+
+    &__wrapper {
+      height: rem(120);
+      position: absolute;
+      right: 0;
+      bottom: 0;
+    }
+
+    &__item {
+      display: flex;
+      height: 100%;
+      align-items: center;
+      margin-left: rem(45);
+      float: left;
+
+      &:first-child {
+        margin: 0;
+      }
+    }
+
+    &__link {
+      display: inline-block;
+      color: map-get($colors, "blue");
+      text-transform: uppercase;
+      position: relative;
+      letter-spacing: rem(.55);
+
+      .current-menu-item & {
+        text-shadow: rem(1) rem(1) 0 map-get($colors, "blue");
+
+        &:before {
+          height: rem(2);
+          width: 100%;
+          content: "";
+          position: absolute;
+          bottom: rem(-10);
+          background: map-get($colors, "green");
+        }
+      }
+    }
+  }
+
+
+}
