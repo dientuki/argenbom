@@ -1,0 +1,122 @@
+.header {
+  height: rem(215);
+  background: map-get($colors, "white");
+  position: relative;
+  z-index: 9;
+
+  &:before {
+    height: rem(95);
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: "";
+    background: map-get($colors, "blue");
+  }
+
+  &__logo {
+    width: rem(130);
+    height: rem(130);
+    position: absolute;
+    left: rem(100);
+    top: rem(27);
+    background: map-get($colors, "white");
+    border-radius: 100rem;
+    overflow: hidden;
+    box-shadow: 0 0 rem(10) rem(1) rgba(map-get($colors, "black"), 1);
+  }
+
+  &-menu {
+    height: 100%;
+
+    &__wrapper {
+      height: rem(120);
+      position: absolute;
+      right: 0;
+      bottom: 0;
+    }
+
+    &__item {
+      display: flex;
+      height: 100%;
+      align-items: center;
+      margin-left: rem(45);
+      float: left;
+      position: relative;
+
+      &:first-child {
+        margin: 0;
+      }
+
+      &:hover {
+        .sub-menu {
+          display: block;
+          visibility: visible;
+        }
+      }
+    }
+
+    &__link {
+      $transition: .5s ease;
+      display: inline-block;
+      color: map-get($colors, "blue");
+      text-transform: uppercase;
+      position: relative;
+      letter-spacing: rem(.55);
+      transition: text-shadow $transition;
+
+      &:before {
+        left: 0;
+        right: 0;
+        height: rem(2);
+        width: 0;
+        content: "";
+        position: absolute;
+        bottom: rem(-10);
+        background: map-get($colors, "green");
+        transition: width $transition;
+        border-radius: rem(2);
+        margin: 0 auto;
+      }
+
+      .current-menu-item &,
+      &:hover {
+        text-shadow: rem(1) rem(1) 0 map-get($colors, "blue");
+
+        &:before {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  /* stylelint-disable no-descending-specificity */
+
+  .sub-menu {
+    $p: rem(12);
+    position: absolute;
+    top: rem(90);
+    width: rem(370);
+    padding: 0 $p;
+    background: map-get($colors, "blue");
+    @include hide();
+
+    .header-menu {
+      &__item {
+        margin: 0;
+        width: 100%;
+        border-bottom: solid rem(1) map-get($colors, "white");
+
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+
+      &__link {
+        color: map-get($colors, "white");
+        width: 100%;
+        padding: rem(10) 0;
+      }
+    }
+  }
+}
