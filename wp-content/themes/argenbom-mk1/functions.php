@@ -102,9 +102,7 @@ require_once (ARGENBOMMK1_THEME_FOLDER_PATH . 'widgets/class.tactic-widget.php')
  * @return array (maybe) modified nav menu class.
  */
 function argenbom_mk1_nav_class( $classes, $item, $args ) {
-  //die($item->url);
-  //die(print_r($args));
-  $classes = array();
+  //$classes = array();
 
   if ($args->theme_location === 'social') {
     $classes[] = $item->title;
@@ -114,7 +112,6 @@ function argenbom_mk1_nav_class( $classes, $item, $args ) {
 
   return $classes;
 }
-
 add_filter( 'nav_menu_css_class' , 'argenbom_mk1_nav_class' , 10, 3 );
 
 function argenbom_mk1_menu_link_class( $atts, $item, $args ) {
