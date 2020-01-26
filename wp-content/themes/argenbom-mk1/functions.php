@@ -58,7 +58,7 @@ add_action( 'after_setup_theme', 'argenbom_mk1_theme_support' );
 /**
  * Register navigation menus uses wp_nav_menu in five places.
  */
-function argenbom_mk1_menus() {
+function argenbom_mk1_init() {
 
 	$locations = array(
 		'primary'  => 'Header Menu',
@@ -66,10 +66,10 @@ function argenbom_mk1_menus() {
 		'social'   => 'Social Menu'
 	);
 
-	register_nav_menus( $locations );
+  register_nav_menus( $locations );
 }
 
-add_action( 'init', 'argenbom_mk1_menus' );
+add_action( 'init', 'argenbom_mk1_init' );
 
 function argenbom_mk1_widget_area_registration() {
 	// Front page
