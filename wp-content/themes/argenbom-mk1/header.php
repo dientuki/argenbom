@@ -21,8 +21,17 @@
   
     <?php if (is_front_page() == false): ?>
 
-      <header>
-        header!!
+      <header class="header">
+        <div class="wrapper">
+          <a href="" class="header__logo"></a>
+          <?php wp_nav_menu( array(
+              'container' => 'nav',
+              'container_class' => 'header-menu__wrapper',
+              'depth' => 1,
+              'menu_class' => 'header-menu',
+              'theme_location'=>'primary'
+            )); ?>        
+        </div>
       </header>
 
     <?php endif; ?>  
