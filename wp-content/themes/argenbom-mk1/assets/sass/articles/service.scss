@@ -1,0 +1,25 @@
+.article-service {
+  
+  &__wrapper {
+    width: calc(100% - #{rem(35*2)});
+    margin: 0 auto;
+    padding: rem(100) 0 rem(170) 0;
+  }
+
+  &__content-wrapper {
+    background: map-get($colors, "white");
+    display: flex;
+    padding: rem(50);
+  }
+
+  &__imagen {
+    width: rem(400);
+    min-width: rem(400);
+    max-width: rem(400);
+  }
+
+  &__content {
+    flex-grow: 2;
+    margin-left: rem(60);
+  }
+}
