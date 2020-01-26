@@ -88,35 +88,35 @@
         }
       }
     }
+  }
 
-    .sub-menu {
-      $p: rem(12);
-      position: absolute;
-      top: rem(90);
-      width: rem(370);
-      padding: 0 $p;
-      background: map-get($colors, "blue");
-      @include hide();
+  /* stylelint-disable no-descending-specificity */
 
-      .header-menu {
-        &__item {
-          margin: 0;
-          width: 100%;
-          border-bottom: solid rem(1) map-get($colors, "white");
-          
-          &:last-child {
-            border-bottom: none;
-          }
+  .sub-menu {
+    $p: rem(12);
+    position: absolute;
+    top: rem(90);
+    width: rem(370);
+    padding: 0 $p;
+    background: map-get($colors, "blue");
+    @include hide();
+
+    .header-menu {
+      &__item {
+        margin: 0;
+        width: 100%;
+        border-bottom: solid rem(1) map-get($colors, "white");
+
+        &:last-child {
+          border-bottom: none;
         }
+      }
 
-        &__link {
-          color: map-get($colors, "white");
-          width: 100%;
-          padding: rem(10) 0;
-        }
+      &__link {
+        color: map-get($colors, "white");
+        width: 100%;
+        padding: rem(10) 0;
       }
     }
   }
-
-
 }
