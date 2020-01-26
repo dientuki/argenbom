@@ -47,8 +47,7 @@
   height: 0;
   position: relative;
   display: block;
-  background: map-get($colors, "black");
-  background-size: 60% auto;
+  background: map-get($colors, "white");
   overflow: hidden;
   z-index: 0;
 
@@ -138,5 +137,15 @@
 
   &:before {
     color: map-get($colors, "blue");
+  }
+}
+
+.background {
+  &-green {
+    background: map-get($colors, "green");
+  }
+
+  &-black {
+    background: map-get($colors, "black");
   }
 }

@@ -7,7 +7,7 @@
       <article class="widget-column__article">
         
         <div class="widget-column__image">
-          <figure class="aspect-column">
+          <figure class="aspect-column background-black">
             <?php $images = get_attached_media('image', $column->ID); ?>
             <?php if (count($images) > 0): ?>
               <?php
