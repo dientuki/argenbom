@@ -50,7 +50,7 @@ function load_svg($file) {
 }
 
 function argenbom_mk1_theme_support() {
-  add_theme_support( 'post-thumbnails', array( 'page' ) );
+  add_theme_support( 'post-thumbnails', array( 'page', 'servicios' ) );
 }
 
 add_action( 'after_setup_theme', 'argenbom_mk1_theme_support' );

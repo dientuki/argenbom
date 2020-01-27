@@ -9,6 +9,7 @@
     background: map-get($colors, "white");
     display: flex;
     padding: rem(50);
+    margin-top: rem(40);
   }
 
   &__imagen {
