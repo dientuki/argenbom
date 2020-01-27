@@ -14,7 +14,7 @@ Template Post Type: servicios
     <section class="listview-services">
       <h1><?php echo get_the_title() ?></h1>
 
-      <?php $services = new WP_Query( array('post_parent' => 62,'post_type' => 'servicios') ) ;?>
+      <?php $services = new WP_Query( array('post_parent' => get_the_ID(),'post_type' => 'servicios') ) ;?>
 
       <?php if ( $services->have_posts() ):?>
         <div class="listview-services__wrapper">
