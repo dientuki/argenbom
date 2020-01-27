@@ -68,18 +68,6 @@ function argenbom_mk1_init() {
 
   register_nav_menus( $locations );
 
-      register_post_type( 'services',
-        array(
-            'labels' => array(
-                'name' => 'Servicios',
-                'singular_name' => 'Servicio',
-            ),
-            'public' => true,
-            'has_archive' => true,
-            'rewrite' => array('slug' => 'servicios'),
-        )
-    );
-
     // Set UI labels for Custom Post Type
     $labels = array(
         'name'                => 'Servicios',
@@ -95,6 +83,10 @@ function argenbom_mk1_init() {
         'search_items'        => 'Buscar Servicio',
         'not_found'           => 'Servicio no encontrado',
         'not_found_in_trash'  => 'Servicio no encontrado en papelera',
+    );
+
+    $rewrite = array(
+      'slug'                => 'servicios'
     );
      
 // Set other options for Custom Post Type
@@ -119,10 +111,12 @@ function argenbom_mk1_init() {
         'show_in_admin_bar'   => true,
         'menu_position'       => 5,
         'can_export'          => true,
-        'has_archive'         => false,
+        'has_archive'         => true,
         'exclude_from_search' => false,
         'publicly_queryable'  => true,
         'capability_type'     => 'page',
+        'query_var'           => 'servicios',
+        'rewrite' => $rewrite,
         'supports' => array('title', 'editor', 'author', 'thumbnail', 'excerpt','page-attributes'),
     );
      
