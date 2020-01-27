@@ -1,7 +1,7 @@
 <?php
 /*
 Template Name: Servicio
-Template Post Type: page
+Template Post Type: servicios
 */
 // Page code here...
 ?>
