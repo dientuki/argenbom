@@ -21,4 +21,13 @@
     flex-grow: 2;
     margin-left: rem(60);
   }
+
+  &__listview {
+    &-title {
+      color: map-get($colors, "white");
+      font-size: rem(16);
+      margin: rem(20) 0;
+      font-family: myriadpro-light;
+    }
+  }
 }

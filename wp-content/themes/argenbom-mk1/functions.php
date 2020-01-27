@@ -115,7 +115,6 @@ function argenbom_mk1_init() {
         'exclude_from_search' => false,
         'publicly_queryable'  => true,
         'capability_type'     => 'page',
-        'query_var'           => 'servicios',
         'rewrite' => $rewrite,
         'supports' => array('title', 'editor', 'author', 'thumbnail', 'excerpt','page-attributes'),
     );
