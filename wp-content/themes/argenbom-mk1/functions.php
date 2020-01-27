@@ -67,6 +67,67 @@ function argenbom_mk1_init() {
 	);
 
   register_nav_menus( $locations );
+
+      register_post_type( 'services',
+        array(
+            'labels' => array(
+                'name' => 'Servicios',
+                'singular_name' => 'Servicio',
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'rewrite' => array('slug' => 'servicios'),
+        )
+    );
+
+    // Set UI labels for Custom Post Type
+    $labels = array(
+        'name'                => 'Servicios',
+        'singular_name'       => 'Servicio',
+        'menu_name'           => 'Servicios',
+        'parent_item_colon'   => 'Servicio superior',
+        'all_items'           => 'Todos los servicios',
+        'view_item'           => 'Ver servicio',
+        'add_new_item'        => 'Añadir nuevo servicio',
+        'add_new'             => 'Añadir Servicio',
+        'edit_item'           => 'Editar Servicio',
+        'update_item'         => 'Actualizar Servicio',
+        'search_items'        => 'Buscar Servicio',
+        'not_found'           => 'Servicio no encontrado',
+        'not_found_in_trash'  => 'Servicio no encontrado en papelera',
+    );
+     
+// Set other options for Custom Post Type
+     
+    $args = array(
+        'label'               => 'servicios',
+        'description'         => 'Servicios',
+        'labels'              => $labels,
+        // Features this CPT supports in Post Editor
+        //'supports'            => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields', ),
+        // You can associate this CPT with a taxonomy or custom taxonomy. 
+        'taxonomies'          => array( 'servicios' ),
+        /* A hierarchical CPT is like Pages and can have
+        * Parent and child items. A non-hierarchical CPT
+        * is like Posts.
+        */ 
+        'hierarchical'        => true,
+        'public'              => true,
+        'show_ui'             => true,
+        'show_in_menu'        => true,
+        'show_in_nav_menus'   => true,
+        'show_in_admin_bar'   => true,
+        'menu_position'       => 5,
+        'can_export'          => true,
+        'has_archive'         => false,
+        'exclude_from_search' => false,
+        'publicly_queryable'  => true,
+        'capability_type'     => 'page',
+        'supports' => array('title', 'editor', 'author', 'thumbnail', 'excerpt','page-attributes'),
+    );
+     
+    // Registering your Custom Post Type
+    register_post_type( 'servicios', $args );
 }
 
 add_action( 'init', 'argenbom_mk1_init' );
