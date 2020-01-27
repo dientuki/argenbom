@@ -1,0 +1,19 @@
+.listview {
+  &-services {
+    width: calc(100% - #{rem(35*2)});
+    margin: 0 auto;
+    padding: rem(100) 0 rem(170) 0;
+
+    &__wrapper {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+    }
+
+    .article-service {
+      width: rem(200);
+      text-align: center;
+      margin-top: rem(40);
+    }
+  }
+}

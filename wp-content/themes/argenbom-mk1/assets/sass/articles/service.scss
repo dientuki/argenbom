@@ -9,6 +9,7 @@
     background: map-get($colors, "white");
     display: flex;
     padding: rem(50);
+    margin-top: rem(40);
   }
 
   &__imagen {
@@ -20,5 +21,14 @@
   &__content {
     flex-grow: 2;
     margin-left: rem(60);
+  }
+
+  &__listview {
+    &-title {
+      color: map-get($colors, "white");
+      font-size: rem(16);
+      margin: rem(20) 0;
+      font-family: myriadpro-light;
+    }
   }
 }

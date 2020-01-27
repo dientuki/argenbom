@@ -31,3 +31,6 @@ wp-content/themes/*/dist/*
 
 # the config
 wp-config.php
+
+# the config
+.htaccess

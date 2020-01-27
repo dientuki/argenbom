@@ -3,7 +3,6 @@
 Template Name: Servicio
 Template Post Type: servicios
 */
-// Page code here...
 ?>
 
 <?php get_header(); ?>
