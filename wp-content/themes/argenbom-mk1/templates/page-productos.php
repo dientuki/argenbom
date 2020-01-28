@@ -9,17 +9,27 @@ Template Post Type: page
       
 
 <main>
-  <div>
-    carrousel
-  </div>
 
   <?php $products = new WP_Query( array('post_type' => 'productos') ) ;?>
-  
-  <?php if ( $services->have_posts() ):?>
-    <div class="listview-services__wrapper">
-      <?php while ( $services->have_posts() ): $services->the_post(); ?>
+  <?php if ( $products->have_posts() ):?>
+    <div class="carrousel background-blue">
+      <div class="wrapper">
+        carrousel
+        <?php while ( $products->have_posts() ): $products->the_post(); ?>
+          <article>
+            producto en carrusel
+          </article>
+
+        <?php endwhile;?>
+
+      </div>
+
+    </div>
+
+    <div class="listview-products__wrapper">
+      <?php while ( $products->have_posts() ): $products->the_post(); ?>
         <article>
-          producto
+          producto fuera
         </article>
 
       <?php endwhile;?>
