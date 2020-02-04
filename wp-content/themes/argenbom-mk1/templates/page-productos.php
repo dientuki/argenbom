@@ -55,8 +55,8 @@ $active = true;
                   <?php foreach($fields as $field): ?>
                     <?php $tmp = get_field_object( $field ); ?>
                     <?php if ($tmp): ?>
-                      <div class=""><?php echo $tmp['label']; ?></div>
-                      <div class=""><?php echo $tmp['value']; ?></div>
+                      <div class="listview-products__acf-title"><?php echo $tmp['label']; ?></div>
+                      <div class="listview-products__acf-value"><?php echo $tmp['value']; ?></div>
                     <?php endif; ?>
                   <?php endforeach; ?>
 
