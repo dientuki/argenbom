@@ -85,11 +85,13 @@ export default class carrousel {
         return;
       }
 
-      card.parentNode.querySelector('.active').classList.remove('active');
-      card.classList.add('active');
+      window.requestAnimationFrame(() => {
+        card.parentNode.querySelector('.active').classList.remove('active');
+        card.classList.add('active');
 
-      this.content.querySelector('.active').classList.remove('active');
-      this.content.querySelector(`article[data-id="${card.dataset.id}"]`).classList.add('active');
+        this.content.querySelector('.active').classList.remove('active');
+        this.content.querySelector(`article[data-id="${card.dataset.id}"]`).classList.add('active');
+      });
     });
   }
 

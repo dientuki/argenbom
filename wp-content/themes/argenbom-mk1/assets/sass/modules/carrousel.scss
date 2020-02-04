@@ -41,6 +41,17 @@ $space: 45;
     }
   }
 
+  &__title {
+    text-align: center;
+    font-family: myriadpro-light;
+    @include clamp(3);
+    margin-top: rem(15);
+    font-size: rem(18);
+    line-height: 1em;
+    height: rem(18*3);
+    text-transform: uppercase;
+  }
+
   &__item {
     cursor: pointer;
 
@@ -58,17 +69,6 @@ $space: 45;
         }
       }
     }
-  }
-
-  &__title {
-    text-align: center;
-    font-family: myriadpro-light;
-    @include clamp(3);
-    margin-top: rem(15);
-    font-size: rem(18);
-    line-height: 1em;
-    height: rem(18*3);
-    text-transform: uppercase;
   }
 
   &-controls {
