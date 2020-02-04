@@ -26,6 +26,22 @@
 
     .content {
       font-family: myriadpro-light;
+      font-size: rem(20);
+
+      li {
+        position: relative;
+        padding-left: rem(10);
+
+        &:before {
+          width: rem(5);
+          height: rem(5);
+          content: "";
+          background: map-get($colors, "green");
+          position: absolute;
+          border-radius: 100em;
+          left: rem(-50);
+        }        
+      }
     }
 
     &__acf {
@@ -38,11 +54,12 @@
 
       &-value {
         font-size: rem(20);
+        line-height: rem(25);
       }
 
       &-title,
       &-value {
-        margin-bottom: rem(2);
+        margin-bottom: rem(3);
       }
     }
 
@@ -52,8 +69,8 @@
       height: 100%;
       position: absolute;
 
-      .listview-products__acf-value:last-child {
-        margin-bottom: rem(20);
+      .listview-products__acf-value:last-of-type {
+        margin-bottom: rem(30);
       }
     }
 
