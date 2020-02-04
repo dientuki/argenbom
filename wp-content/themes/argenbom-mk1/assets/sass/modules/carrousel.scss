@@ -15,7 +15,6 @@ $space: 45;
 
   &-wrapper {
     position: relative;
-    overflow: hidden;
     height: rem(325);
     width: calc(100% - #{rem(358)});
     margin: 0 auto;
@@ -42,20 +41,6 @@ $space: 45;
     }
   }
 
-  &__item {
-    cursor: pointer;
-
-    &.active {
-      cursor: default;
-
-      .carrousel__image {
-        &:before {
-          opacity: 0;
-        }
-      }
-    }
-  }
-
   &__title {
     text-align: center;
     font-family: myriadpro-light;
@@ -65,5 +50,50 @@ $space: 45;
     line-height: 1em;
     height: rem(18*3);
     text-transform: uppercase;
+  }
+
+  &__item {
+    cursor: pointer;
+
+    &.active {
+      cursor: default;
+
+      .carrousel__title {
+        font-family: myriadpro-regular;
+        font-weight: map-get($font-weight, "bold");
+      }
+
+      .carrousel__image {
+        &:before {
+          opacity: 0;
+        }
+      }
+    }
+  }
+
+  &-controls {
+    &-prev,
+    &-next {
+      position: absolute;
+      width: rem(30);
+      top: 50%;
+
+      &:before {
+        width: rem(30);
+        height: rem(30);
+        content: "";
+        background: map-get($colors, "green");
+        position: absolute;
+        border-radius: 10rem;
+      }
+    }
+
+    &-prev {
+      left: rem(-50);
+    }
+
+    &-next {
+      right: rem(-50);
+    }
   }
 }
