@@ -24,6 +24,7 @@ if (document.querySelector('#carrousel') !== null) {
       controls: false,
       gutter: 35,
       items: 4,
+      lazyload: true,
       loop: false,
       nav: false
     });

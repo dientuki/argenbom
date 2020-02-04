@@ -51,7 +51,7 @@ $active = true;
 
                 <div class="content">
                   <?php echo $c; ?>
-                  <?php $fields = array('typeWater', 'instalation', 'use'); ?>
+                  <?php $fields = array('typeWater', 'installation', 'use'); ?>
                   <?php foreach($fields as $field): ?>
                     <?php $tmp = get_field_object( $field ); ?>
                     <?php if ($tmp): ?>
