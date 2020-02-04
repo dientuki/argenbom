@@ -16,4 +16,13 @@
       margin-top: rem(40);
     }
   }
+
+  &-products {
+    &__wrapper {
+      width: calc(100% - #{rem(358)});
+      margin: 0 auto;
+      background: map-get($colors, "lightblue");
+      padding: rem(50);
+    }
+  }
 }

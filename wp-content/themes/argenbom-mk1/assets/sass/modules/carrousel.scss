@@ -1,0 +1,69 @@
+$space: 45;
+
+.carrousel {
+  position: relative;
+
+  &:before {
+    height: rem(275);
+    width: 100%;
+    background: map-get($colors, "blue");
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &-wrapper {
+    position: relative;
+    overflow: hidden;
+    height: rem(325);
+    width: calc(100% - #{rem(358)});
+    margin: 0 auto;
+    padding-top: rem(90);
+    box-sizing: content-box;
+  }
+
+  &__image {
+    border: solid rem(1) map-get($colors, "black");
+    position: relative;
+    z-index: 1;
+
+    &:before {
+      width: 100%;
+      height: 100%;
+      background: map-get($colors, "white");
+      opacity: .3;
+      z-index: 2;
+      content: "";
+      left: 0;
+      top: 0;
+      box-sizing: content-box;
+      position: absolute;
+    }
+  }
+
+  &__item {
+    cursor: pointer;
+
+    &.active {
+      cursor: default;
+
+      .carrousel__image {
+        &:before {
+          opacity: 0;
+        }
+      }
+    }
+  }
+
+  &__title {
+    text-align: center;
+    font-family: myriadpro-light;
+    @include clamp(3);
+    margin-top: rem(15);
+    font-size: rem(18);
+    line-height: 1em;
+    height: rem(18*3);
+    text-transform: uppercase;
+  }
+}

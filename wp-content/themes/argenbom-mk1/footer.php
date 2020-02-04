@@ -13,6 +13,12 @@
       </div>
     </footer>
 
+    <script>
+      "use strict";
+      window.ARG = {
+        mainDomain: "<?php echo get_template_directory_uri(); ?>"
+      };
+    </script>
 		<?php wp_footer(); ?>
 		
 	</body>

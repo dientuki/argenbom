@@ -79,14 +79,21 @@
         margin: 0 auto;
       }
 
-      .current-menu-item &,
-      &:hover {
+      .current-menu-item & {
         text-shadow: rem(1) rem(1) 0 map-get($colors, "blue");
 
         &:before {
           width: 100%;
         }
       }
+    }
+  }
+
+  &-menu > .header-menu__item .header-menu__link:hover {
+    text-shadow: rem(1) rem(1) 0 map-get($colors, "blue");
+
+    &:before {
+      width: 100%;
     }
   }
 
