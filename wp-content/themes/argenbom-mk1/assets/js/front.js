@@ -1,6 +1,6 @@
 /* eslint-disable no-new */
 import lzl from './modules/lazyload/native';
-__webpack_public_path__ = `${window.location.protocol}//${window.location.host}/dist/`;
+__webpack_public_path__ = `${window.ARG.mainDomain}/dist/`;
 
 const settings_lzl = {
   data_src: 'original',
@@ -12,5 +12,19 @@ if ('IntersectionObserver' in window) {
 } else {
   import(/* webpackChunkName: "lzlVanilla" */ './modules/lazyload/vanilla').then((module) => {
     module.vanilla(settings_lzl);
+  });
+}
+
+if (document.querySelector('#carrousel') !== null) {
+  import(/* webpackChunkName: "tinyslider" */ './modules/carrousel/carrousel').then((carrousel) => {
+    new carrousel.default({
+      arrowKeys: true,
+      container: '#carrousel',
+      controls: false,
+      gutter: 35,
+      items: 4,
+      loop: false,
+      nav: false
+    });
   });
 }
