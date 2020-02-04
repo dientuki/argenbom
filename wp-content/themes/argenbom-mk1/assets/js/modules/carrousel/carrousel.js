@@ -81,14 +81,11 @@ export default class carrousel {
     document.querySelector(this.settings.container).addEventListener('click', () => {
       const card = killBubling(event.target, 'ARTICLE');
 
-
       if (card.classList.contains('active')) {
         return;
       }
 
-      console.log(card.dataset.id);
-
-
+      card.classList.add('hola');
     });
   }
 
