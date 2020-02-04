@@ -1,7 +1,11 @@
 		<?php get_header(); ?>
 
-        a<?php echo post_type_archive_title() ?>a
-
-		hola mundo en blanco y vacio index.php
+    <main class="background-green">
+      <div class="wrapper">
+        <?php the_title(); ?>
+        ------
+        <?php the_content(); ?>
+      <div>
+    </main>
 
 		<?php get_footer();
