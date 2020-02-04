@@ -20,6 +20,7 @@ if (document.querySelector('#carrousel') !== null) {
     new carrousel.default({
       arrowKeys: true,
       container: '#carrousel',
+      content: '#product-list',
       controls: false,
       gutter: 35,
       items: 4,

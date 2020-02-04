@@ -18,7 +18,7 @@ export default class carrousel {
       prev: this.wrapper.querySelector('.carrousel-controls-prev')
     };
 
-    this.content = this.settings.content;
+    this.content = document.querySelector(this.settings.content);
     delete this.settings.content;
 
     this.slider = tns(this.settings);
@@ -85,7 +85,11 @@ export default class carrousel {
         return;
       }
 
-      card.classList.add('hola');
+      card.parentNode.querySelector('.active').classList.remove('active');
+      card.classList.add('active');
+
+      this.content.querySelector('.active').classList.remove('active');
+      this.content.querySelector(`article[data-id="${card.dataset.id}"]`).classList.add('active');
     });
   }
 

@@ -18,11 +18,27 @@
   }
 
   &-products {
-    &__wrapper {
-      width: calc(100% - #{rem(358)});
-      margin: 0 auto;
-      background: map-get($colors, "lightblue");
-      padding: rem(50);
+    width: calc(100% - #{rem(358)});
+    margin: 0 auto rem(85) auto;
+    background: map-get($colors, "lightblue");
+    padding: rem(50);
+    position: relative;
+
+    &__item {
+      @include hide();
+      width: 100%;
+      height: 100%;
+      position: absolute;
+    }
+
+    .active {
+      display: block;
+      visibility: visible;
+      position: relative;
     }
   }
+}
+
+#product-list {
+  position: relative;
 }
