@@ -23,20 +23,6 @@ $space: 45;
     box-sizing: content-box;
   }
 
-  &__item {
-    cursor: pointer;
-
-    &.active {
-      cursor: default;
-      
-      .carrousel__image {
-        &:before {
-          opacity: 0;
-        }
-      }
-    }
-  }
-
   &__image {
     border: solid rem(1) map-get($colors, "black");
     position: relative;
@@ -56,6 +42,20 @@ $space: 45;
     }
   }
 
+  &__item {
+    cursor: pointer;
+
+    &.active {
+      cursor: default;
+
+      .carrousel__image {
+        &:before {
+          opacity: 0;
+        }
+      }
+    }
+  }
+
   &__title {
     text-align: center;
     font-family: myriadpro-light;
@@ -66,6 +66,4 @@ $space: 45;
     height: rem(18*3);
     text-transform: uppercase;
   }
-
 }
-
