@@ -2,6 +2,7 @@ $space: 45;
 
 .carrousel {
   position: relative;
+  margin-bottom: rem(20);
 
   &:before {
     height: rem(275);
@@ -75,12 +76,12 @@ $space: 45;
     &-prev,
     &-next {
       position: absolute;
-      width: rem(30);
-      top: 50%;
+      width: rem(33);
+      top: 47%;
 
       &:before {
-        width: rem(30);
-        height: rem(30);
+        width: rem(33);
+        height: rem(33);
         content: "";
         background: map-get($colors, "green");
         position: absolute;
@@ -89,11 +90,11 @@ $space: 45;
     }
 
     &-prev {
-      left: rem(-50);
+      left: rem(-68);
     }
 
     &-next {
-      right: rem(-50);
+      right: rem(-68);
     }
   }
 }
