@@ -2,6 +2,7 @@
 
     <main class="background-green">
       <div class="wrapper">
+      <?php the_post() ?>
         <?php the_title(); ?>
         ------
         <?php the_content(); ?>
