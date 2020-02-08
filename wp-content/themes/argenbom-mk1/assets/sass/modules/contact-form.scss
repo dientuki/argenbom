@@ -1,0 +1,51 @@
+.wpcf7 {
+  label {
+    @include hide();
+  }
+
+  &-form {
+    font-family: myriadpro-light;
+    padding: rem(60) 0;
+    width: calc(100% - #{rem(80)});
+    margin: 0 auto;
+  }
+
+  &-text,
+  &-textarea {
+    border: none;
+    width: 100%;
+    padding: rem(30) rem(50);
+    text-transform: uppercase;
+  }
+
+  &-text {
+    border-radius: 10rem;
+  }
+
+  &-textarea {
+    border-radius: rem(40);
+  }
+}
+
+.form {
+  &-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &-left {
+    width: rem(610);
+  }
+
+  &-right {
+    width: rem(650);
+  }
+
+  &-item {
+    margin-top: rem(40);
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+}
