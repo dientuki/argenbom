@@ -34,9 +34,9 @@ rules.push({
     paths.resources.images
   ],
   use: [
-    {loader: 'file-loader',
+    { loader: 'file-loader',
       options: {
-        hashType:'sha512',
+        hashType: 'sha512',
         digestType: 'hex',
         name: names,
         outputPath: 'images/'

@@ -6,7 +6,7 @@
       
       <article class="widget-column__article">
         
-        <div class="widget-column__image">
+        <div class="widget-column__image widget-column__<?php echo sanitize_title($column->post_title); ?>">
           <figure class="aspect-column background-black">
             <?php $images = get_attached_media('image', $column->ID); ?>
             <?php if (count($images) > 0): ?>
