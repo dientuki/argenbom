@@ -103,45 +103,68 @@
   }
 }
 
-.more-info {
+.more-info,
+.more-info-email {
   border: solid rem(1);
   height: rem(30);
   line-height: rem(30);
   padding: 0 rem(22);
   border-radius: rem(9);
-  font-weight: map-get($font-weight, "bold");
   display: inline-block;
+}
+
+.more-info {
+  font-weight: map-get($font-weight, "bold");
 
   &:before {
     content: "+ ";
   }
-}
 
-.more-info-white {
-  border-color: map-get($colors, "blue");
-  color: map-get($colors, "blue");
-
-  &:before {
-    color: map-get($colors, "green");
-  }
-}
-
-.more-info-blue {
-  border-color: map-get($colors, "white");
-  color: map-get($colors, "white");
-
-  &:before {
-    color: map-get($colors, "green");
-  }
-}
-
-.more-info-green {
-  border-color: map-get($colors, "white");
-  color: map-get($colors, "white");
-
-  &:before {
+  &-white {
+    border-color: map-get($colors, "blue");
     color: map-get($colors, "blue");
+
+    &:before {
+      color: map-get($colors, "green");
+    }
   }
+
+  &-blue {
+    border-color: map-get($colors, "white");
+    color: map-get($colors, "white");
+
+    &:before {
+      color: map-get($colors, "green");
+    }
+  }
+
+  &-green {
+    border-color: map-get($colors, "white");
+    color: map-get($colors, "white");
+
+    &:before {
+      color: map-get($colors, "blue");
+    }
+  }  
+}
+
+.more-info-email {
+  font-family: myriadpro-light;
+  color: map-get($colors, "black");
+  margin-top: rem(30);
+  padding-left: rem(60);
+  position: relative;
+
+  &:before {
+    content: "";
+    position: absolute;
+    left: rem(20);
+    top: 50%;
+    transform: translateY(-50%);
+    width: rem(22);
+    height: rem(15);
+    background: map-get($colors, "green");
+  }  
 }
 
 .background {
@@ -154,10 +177,12 @@
   }
 }
 
-.float-left {
-  float: left;
-}
+.float {
+  &-left {
+    float: left;
+  }
 
-.float-right {
-  float: right;
+  &-right {
+    float: right;
+  }
 }
