@@ -50,7 +50,6 @@ $active = true;
                 <h1 class="hidden"><?php the_title(); ?></h1>
 
                 <div class="content">
-                  <?php echo $c; ?>
                   <?php $fields = array('typeWater', 'installation', 'use'); ?>
                   <?php foreach($fields as $field): ?>
                     <?php $tmp = get_field_object( $field ); ?>
@@ -61,7 +60,7 @@ $active = true;
                   <?php endforeach; ?>
 
                   <?php the_content(); ?>
-                  <a href="mailto:test@example.com?subject=<?php the_title() ?>">Solicitar presupuesto o asesoramiento <strong>via email</strong></a>
+                  <a href="mailto:test@example.com?subject=<?php the_title() ?>" class="more-info-email uppercase">Solicitar presupuesto o asesoramiento <strong>via email</strong></a>
                 </div>
                 
 
