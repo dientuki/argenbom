@@ -170,7 +170,7 @@
   &__deco {
     min-width: rem(150);
     height: rem(150);
-    background: map-get($colors, "green");
+    background: map-get($colors, "green") center center no-repeat url("../images/novedades.png");
     border-radius: 10rem;
   }
 
