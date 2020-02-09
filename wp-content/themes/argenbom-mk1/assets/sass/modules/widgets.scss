@@ -103,13 +103,25 @@
       width: rem(150);
       height: rem(150);
       content: "";
-      background: map-get($colors, "green");
+      background: map-get($colors, "green") no-repeat center center;
       right: rem(-75);
       top: 50%;
       transform: translateY(-50%);
       position: absolute;
       z-index: 90;
       border-radius: 100em;
+    }
+  }
+
+  &__productos {
+    &:before {
+      background-image: url("../images/prod.png");
+    }
+  }
+
+  &__nuestra-empresa {
+    &:before {
+      background-image: url("../images/nuestra_empresa.png");
     }
   }
 
