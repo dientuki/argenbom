@@ -73,34 +73,6 @@ $space: 45;
   }
 
   &-controls {
-    &-prev,
-    &-next {
-      position: absolute;
-      width: rem(33);
-      top: 47%;
-
-      &:after {
-        border-style: solid;
-        border-width: rem(4) rem(4) 0 0;
-        content: "";
-        display: inline-block;
-        height: rem(7);
-        position: absolute;
-        width: rem(7);
-        top: rem(10);
-      }
-
-      &:before {
-        width: rem(33);
-        height: rem(33);
-        content: "";
-        background: map-get($colors, "green");
-        position: absolute;
-        border-radius: 10rem;
-        z-index: 0;
-      }
-    }
-
     &-prev {
       left: rem(-68);
 
@@ -116,6 +88,49 @@ $space: 45;
       &:after {
         left: rem(10);
         transform: rotate(45deg);
+      }
+    }
+
+    &-prev,
+    &-next {
+      position: absolute;
+      width: rem(33);
+      height: rem(33);
+      top: 47%;
+      cursor: pointer;
+
+      &:after {
+        border-style: solid;
+        border-width: rem(4) rem(4) 0 0;
+        content: "";
+        display: inline-block;
+        height: rem(7);
+        position: absolute;
+        width: rem(7);
+        top: rem(10);
+        filter: invert(0%);
+        transition: filter .5s;
+      }
+
+      &:hover {
+        &:after {
+          filter: invert(100%);
+        }
+      }
+
+      &:before {
+        width: rem(33);
+        height: rem(33);
+        content: "";
+        background: map-get($colors, "green");
+        position: absolute;
+        border-radius: 10rem;
+        z-index: 0;
+      }
+
+      &.disabled {
+        pointer-events: none;
+        cursor: default;
       }
     }
   }
