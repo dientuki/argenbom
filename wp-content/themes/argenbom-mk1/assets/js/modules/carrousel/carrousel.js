@@ -22,6 +22,7 @@ export default class carrousel {
     delete this.settings.content;
 
     this.slider = tns(this.settings);
+    this.disabled = 'disabled';
 
     this.nav();
     this.showItem();
