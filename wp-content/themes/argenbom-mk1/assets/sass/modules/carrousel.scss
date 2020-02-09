@@ -93,11 +93,14 @@ $space: 45;
 
     &-prev,
     &-next {
+      $transition: .5s ease-out;
       position: absolute;
       width: rem(33);
       height: rem(33);
       top: 47%;
       cursor: pointer;
+      opacity: 1;
+      transition: opacity $transition;
 
       &:after {
         border-style: solid;
@@ -109,7 +112,7 @@ $space: 45;
         width: rem(7);
         top: rem(10);
         filter: invert(0%);
-        transition: filter .5s;
+        transition: filter $transition;
       }
 
       &:hover {
@@ -131,6 +134,7 @@ $space: 45;
       &.disabled {
         pointer-events: none;
         cursor: default;
+        opacity: .5;
       }
     }
   }

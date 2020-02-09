@@ -89,7 +89,7 @@
     }
   }
 
-  &-menu > .header-menu__item .header-menu__link:hover {
+  &-menu > .header-menu__item > .header-menu__link:hover {
     text-shadow: rem(1) rem(1) 0 map-get($colors, "blue");
 
     &:before {
