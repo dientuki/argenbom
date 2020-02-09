@@ -87,8 +87,7 @@ $space: 45;
         height: rem(7);
         position: absolute;
         width: rem(7);
-        left: 50%;
-        top: 50%;
+        top: rem(10);
       }
 
       &:before {
@@ -106,8 +105,8 @@ $space: 45;
       left: rem(-68);
 
       &:after {
-        left: rem(4);
-        transform: translateX(-50%) translateY(-50%) rotate(-135deg);
+        left: rem(12);
+        transform: rotate(-135deg);
       }
     }
 
@@ -115,8 +114,8 @@ $space: 45;
       right: rem(-68);
 
       &:after {
-        left: 0;
-        transform: translateX(-50%) translateY(-50%) rotate(45deg);
+        left: rem(10);
+        transform: rotate(45deg);
       }
     }
   }
