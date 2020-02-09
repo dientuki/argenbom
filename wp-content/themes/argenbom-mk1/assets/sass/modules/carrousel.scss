@@ -81,12 +81,12 @@ $space: 45;
 
       &:after {
         border-style: solid;
-        border-width: 0.25em 0.25em 0 0;
-        content: '';
+        border-width: rem(4) rem(4) 0 0;
+        content: "";
         display: inline-block;
-        height: 0.45em;
+        height: rem(7);
         position: absolute;
-        width: 0.45em;
+        width: rem(7);
         left: 50%;
         top: 50%;
       }
@@ -106,8 +106,8 @@ $space: 45;
       left: rem(-68);
 
       &:after {
-        left: 0.25em;
-        transform: translateX(-50%) translateY(-50%) rotate(-135deg);        
+        left: rem(4);
+        transform: translateX(-50%) translateY(-50%) rotate(-135deg);
       }
     }
 
@@ -116,7 +116,7 @@ $space: 45;
 
       &:after {
         left: 0;
-        transform: translateX(-50%) translateY(-50%) rotate(45deg);        
+        transform: translateX(-50%) translateY(-50%) rotate(45deg);
       }
     }
   }
