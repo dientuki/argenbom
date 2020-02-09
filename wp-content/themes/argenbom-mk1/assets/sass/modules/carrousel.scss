@@ -79,6 +79,18 @@ $space: 45;
       width: rem(33);
       top: 47%;
 
+      &:after {
+        border-style: solid;
+        border-width: rem(4) rem(4) 0 0;
+        content: "";
+        display: inline-block;
+        height: rem(7);
+        position: absolute;
+        width: rem(7);
+        left: 50%;
+        top: 50%;
+      }
+
       &:before {
         width: rem(33);
         height: rem(33);
@@ -86,15 +98,26 @@ $space: 45;
         background: map-get($colors, "green");
         position: absolute;
         border-radius: 10rem;
+        z-index: 0;
       }
     }
 
     &-prev {
       left: rem(-68);
+
+      &:after {
+        left: rem(4);
+        transform: translateX(-50%) translateY(-50%) rotate(-135deg);
+      }
     }
 
     &-next {
       right: rem(-68);
+
+      &:after {
+        left: 0;
+        transform: translateX(-50%) translateY(-50%) rotate(45deg);
+      }
     }
   }
 }
