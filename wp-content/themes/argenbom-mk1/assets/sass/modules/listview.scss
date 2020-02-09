@@ -24,26 +24,6 @@
     padding: rem(50);
     position: relative;
 
-    .content {
-      font-family: myriadpro-light;
-      font-size: rem(20);
-
-      li {
-        position: relative;
-        padding-left: rem(10);
-
-        &:before {
-          width: rem(5);
-          height: rem(5);
-          content: "";
-          background: map-get($colors, "green");
-          position: absolute;
-          border-radius: 100em;
-          left: rem(-50);
-        }
-      }
-    }
-
     &__acf {
       &-title {
         font-weight: map-get($font-weight, "bold");

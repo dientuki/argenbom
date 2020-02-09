@@ -1,0 +1,33 @@
+.content {
+  font-family: myriadpro-light;
+  font-size: rem(20);
+
+  strong {
+    font-family: myriadpro-regular;
+  }
+
+  ul {
+    margin-top: rem(7);
+  }
+
+  li {
+    position: relative;
+    padding-left: rem(10);
+    margin-top: rem(7);
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:before {
+      width: rem(5);
+      height: rem(5);
+      content: "";
+      background: map-get($colors, "green");
+      position: absolute;
+      border-radius: 100em;
+      left: 0;
+      top: rem(7);
+    }
+  }
+}
