@@ -34,7 +34,7 @@
       left: 0;
       top: rem(-10);
       content: "";
-      background: map-get($colors, "white");
+      background: map-get($colors, "white") url("../images/gear.png") center center no-repeat;
       border-radius: 100rem;
     }
 
