@@ -45,6 +45,8 @@
     width: 100%;
     height: 100%;
     background: no-repeat center center;
+    background-size: 55%;
+    filter: invert(1);
   }
 
   @each $social in $socials {
