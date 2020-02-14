@@ -22,12 +22,11 @@ Template Post Type: page
       <?php $contact = get_field_object( 'contact' ); ?>
       <?php if ($contact): ?>
         <div class="listview-products__acf-title"><?php echo $contact['label']; ?></div>
-        <div class="listview-products__acf-value"><?php echo nl2br($contact['value']); ?></div>
+        <div class="listview-products__acf-value"><?php echo $contact['value']; ?></div>
 
         <?php $map = get_field_object( 'gmaps' ); ?>
         <?php if ($map): ?>
-          <div class="listview-products__acf-title"><?php echo $map['label']; ?></div>
-          <div class="listview-products__acf-value"><?php echo nl2br($map['value']); ?></div>
+          <div class="listview-products__acf-value"><?php echo $map['value']; ?></div>
         <?php endif; ?>
       <?php endif; ?>
     <div>
