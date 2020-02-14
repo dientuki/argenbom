@@ -1,0 +1,45 @@
+main.our-company {
+  overflow-x: hidden;
+}
+
+.our-company {
+  &-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    width: 50%;
+    flex-basis: 50%;
+    position: relative;
+
+    &:before {
+      position: absolute;
+      width: 200%;
+      height: 100%;
+      content: "";
+      background: map-get($colors, "blue");
+      top:0;
+      z-index: -1;
+    }
+
+    &:first-child,
+    &:last-child {
+      &:before {
+        background: map-get($colors, "green");
+      }
+    }
+
+    &:nth-child(odd) {
+      &:before {
+        right: 0;
+      }
+    }
+
+    &:nth-child(even) {
+      &:before {
+        left: 0;
+      }
+    }
+  }
+}
