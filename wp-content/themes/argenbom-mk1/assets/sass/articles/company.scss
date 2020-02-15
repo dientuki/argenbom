@@ -23,7 +23,7 @@
   &-location {
     position: relative;
     display: flex;
-    padding: rem(62) 0 rem(190) 0;
+    padding: rem(62) 0 0 rem(190);
     justify-content: space-between;
     margin: 0 auto;
     width: calc(100% - #{rem(170)});
