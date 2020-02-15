@@ -26,6 +26,7 @@ Template Post Type: page
       <?php $contact = get_field_object( 'contact' ); ?>
       <?php if ($contact): ?>
         <div class="our-company-location">
+          <div class="our-company-location__deco"></div>
 
           <div class="our-company-location-place">
             <div class="our-company__acf-title bold uppercase">Donde estamos</div>
