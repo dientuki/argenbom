@@ -9,7 +9,7 @@
     &:first-child {
       position: relative;
       padding-bottom: rem(1);
-      
+
       &:before {
         content: "";
         position: absolute;
@@ -102,7 +102,7 @@
         left: 0;
         bottom: rem(-170);
         top: auto;
-        transform: none;        
+        transform: none;
       }
     }
 
