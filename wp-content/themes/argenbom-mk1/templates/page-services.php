@@ -12,7 +12,7 @@ Template Post Type: servicios
 
   <div class="wrapper">
     <section class="listview-services">
-      <h1><?php echo get_the_title() ?></h1>
+      <h1 class="uppercase bold listview-services__title"><?php echo get_the_title() ?></h1>
 
       <?php $services = new WP_Query( array('post_parent' => get_the_ID(),'post_type' => 'servicios') ) ;?>
 

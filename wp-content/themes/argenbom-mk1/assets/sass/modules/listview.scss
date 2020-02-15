@@ -16,6 +16,10 @@
       padding: 0 rem(13) rem(40) rem(13);
       box-sizing: content-box;
     }
+
+    &__title {
+      color: map-get($colors, "blue");
+    }
   }
 
   &-products {
@@ -68,7 +72,13 @@
 }
 
 @media (max-width: em(1440)) {
-  .listview-products {
-    width: calc(100% - #{rem(140)});
+  .listview {
+    &-products {
+      width: calc(100% - #{rem(140)});
+    }
+
+    &-services__wrapper {
+      justify-content: center;
+    }
   }
 }
