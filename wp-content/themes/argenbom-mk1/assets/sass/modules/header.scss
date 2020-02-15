@@ -161,6 +161,7 @@
         bottom: auto;
         top: rem(160);
         padding: rem(5) 0;
+        @include hide();
         
         &:before {
           width: calc(100% + #{rem(20)});
@@ -193,6 +194,19 @@
         }
       }
     }
+  }
+
+  html {
+    &.icopen {
+      .header-menu__wrapper {
+        display: block;
+        visibility: visible;
+      }
+    }
+    &.icoclose {
+      @include hide();
+    }
+
   }
 }
 
