@@ -35,7 +35,6 @@ Template Post Type: page
           <?php $map = get_field_object( 'gmaps' ); ?>
           <?php if ($map): ?>
             <div class="our-company-location-iframe">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2320.099810072505!2d-58.41259972174545!3d-34.67700611126456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccc88bd4f94f5%3A0xc4849c33e70c4322!2sFormosa%202835%2C%20B1824QSJ%20Valent%C3%ADn%20Alsina%2C%20Buenos%20Aires!5e0!3m2!1sen!2sar!4v1581721865160!5m2!1sen!2sar" width="400" height="300" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
               <?php echo $map['value']; ?>
             </div>
           <?php endif; ?>
