@@ -69,6 +69,7 @@
       margin-top: rem(22);
       max-width: rem(533);
       height: auto;
+      width: 100%;
     }
 
     .our-company__acf {
@@ -137,6 +138,18 @@
       &:before {
         left: 0;
       }
+    }
+  }
+}
+
+@media (max-width: em(530)) {
+  .our-company-location {
+    &__deco {
+      @include hide();
+    }
+
+    &-place {
+      padding-top: 0;
     }
   }
 }
