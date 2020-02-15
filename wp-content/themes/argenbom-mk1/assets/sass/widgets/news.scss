@@ -35,6 +35,16 @@
   }
 }
 
+@media (max-width: em(560)) {
+  .widget-news {
+    &__deco {
+      min-width: rem(100);
+      height: rem(100);
+      background-size: 45%;
+    }
+  }
+}
+
 @media (max-width: em(768)) {
   .widget-news {
     &__text {
@@ -44,6 +54,24 @@
     &__more {
       min-width: rem(94);
       flex-basis: rem(94);
+    }
+  }
+}
+
+@media (max-width: em(460)) {
+  .widget-news {
+    &__container {
+      flex-wrap: wrap;
+    }
+
+    &__more {
+      flex-basis: 100%;
+    }
+
+    .more-info {
+      width: 100%;
+      text-align: center;
+      margin-top: rem(15);
     }
   }
 }
