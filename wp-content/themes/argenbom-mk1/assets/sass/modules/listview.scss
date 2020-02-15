@@ -6,14 +6,15 @@
 
     &__wrapper {
       display: flex;
-      flex-wrap: nowrap;
-      justify-content: space-between;
+      flex-wrap: wrap;
+      margin: rem(40) rem(-6.5) 0 rem(-6.5);
     }
 
     .article-service {
       width: rem(200);
       text-align: center;
-      margin-top: rem(40);
+      padding: 0 rem(13) rem(40) rem(13);
+      box-sizing: content-box;
     }
   }
 
