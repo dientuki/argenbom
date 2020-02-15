@@ -16,7 +16,7 @@ $space: 45;
 
   &-wrapper {
     position: relative;
-    height: rem(325);
+    min-height: rem(325);
     width: calc(100% - #{rem(358)});
     margin: 0 auto;
     padding-top: rem(90);
@@ -136,6 +136,14 @@ $space: 45;
         cursor: default;
         opacity: .5;
       }
+    }
+  }
+}
+
+@media (max-width: em(1440)) {
+  .carrousel {
+    &-wrapper {
+      width: calc(100% - #{rem(140)});
     }
   }
 }

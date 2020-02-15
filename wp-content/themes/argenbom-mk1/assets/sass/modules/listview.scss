@@ -65,3 +65,9 @@
 #product-list {
   position: relative;
 }
+
+@media (max-width: em(1440)) {
+  .listview-products {
+    width: calc(100% - #{rem(140)});
+  }
+}
