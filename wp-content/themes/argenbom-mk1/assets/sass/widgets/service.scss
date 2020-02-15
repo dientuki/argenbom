@@ -83,6 +83,7 @@
 @media (max-width: em(1439)) {
   .widget-service {
     &__container {
+      width: 100%;
       flex-wrap: wrap;
     }
 

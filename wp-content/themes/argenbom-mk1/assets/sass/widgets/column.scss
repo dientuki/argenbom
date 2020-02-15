@@ -85,6 +85,21 @@
   }
 }
 
+@media (max-width: em(560)) {
+  .widget-column {
+    &__image:before {
+      width: rem(100);
+      height: rem(100);
+      background-size: 22%;
+      bottom: rem(-140);
+    }
+
+    &__content-wrapper {
+      padding-left: rem(120);
+    }
+  }
+}
+
 @media (max-width: em(900)) {
   .widget-column {
     &__article {
