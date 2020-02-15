@@ -24,6 +24,7 @@
     border-radius: 100rem;
     overflow: hidden;
     box-shadow: 0 0 rem(10) rem(1) rgba(map-get($colors, "black"), 1);
+    z-index: 9;
   }
 
   &-menu {
@@ -62,8 +63,10 @@
       right: 0;
       width: rem(30);
       height: rem(30);
-      top: rem(50);
+      top: rem(42);
       border-radius: rem(5);
+      padding: rem(2);
+      box-sizing: content-box;
       @include hide();
     }
 
@@ -141,6 +144,8 @@
 
 @media (max-width: em(830)) {
   .header {
+    height: rem(190);
+
     &__logo {
       left: 0;
     }
@@ -153,7 +158,19 @@
       &__wrapper {
         left: 0;
         height: auto;
-        bottom: rem(30);
+        bottom: auto;
+        top: rem(160);
+        padding: rem(5) 0;
+        
+        &:before {
+          width: calc(100% + #{rem(20)});
+          height: 100%;
+          left: rem(-10);
+          top: 0;
+          content: "";
+          position: absolute;
+          background: map-get($colors, "white");
+        }
       }
 
       &-action {
@@ -164,6 +181,16 @@
       &__item {
         float: none;
         margin: 0;
+      }
+
+      &__link {
+        margin: 0 rem(5);
+        height: rem(30);
+        line-height: rem(30);
+
+        &:before {
+          @include hide();
+        }
       }
     }
   }

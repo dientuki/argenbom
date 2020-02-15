@@ -1,0 +1,126 @@
+$totalTime: 500ms;
+$midTime: 250ms;
+$fs: 16;
+$easing: cubic-bezier(.08, .74, .39, .97);
+
+@mixin open($Y, $deg) {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(#{$Y/$fs}rem);
+  }
+
+  100% {
+    transform: rotate(#{$deg}deg) translateY(#{$Y/$fs}rem);
+    fill: map-get($colors, "green");
+  }
+}
+
+@mixin close($Y, $deg) {
+  0% {
+    transform: rotate(#{$deg}deg) translateY(#{$Y/$fs}rem);
+    fill: map-get($colors, "green");
+  }
+
+  50% {
+    transform: translateY(#{$Y/$fs}rem) rotate(0);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes ico-top-open {
+  @include open(7.8, 45);
+}
+
+@keyframes ico-top-close {
+  @include close(7.8, 45);
+}
+
+@keyframes ico-bottom-open {
+  @include open(-7.8, -45);
+}
+
+@keyframes ico-bottom-close {
+  @include close(-7.8, -45);
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.icon-menu {
+  .ico-menu-top,
+  .ico-menu-bottom,
+  .ico-menu-middle {
+    transform-origin: center;
+    animation-fill-mode: forwards;
+    animation-timing-function: $easing;
+  }
+}
+
+.icopen {
+  .icon-menu {
+    .ico-menu-top {
+      animation-name: ico-top-open;
+      animation-duration: $totalTime;
+    }
+
+    .ico-menu-bottom {
+      animation-name: ico-bottom-open;
+      animation-duration: $totalTime;
+    }
+
+    .ico-menu-middle {
+      animation-name: fade-out;
+      animation-duration: $totalTime;
+    }
+  }
+}
+
+.icoclose {
+  .icon-menu {
+    .ico-menu-top {
+      animation-name: ico-top-close;
+      animation-duration: $midTime;
+    }
+
+    .ico-menu-bottom {
+      animation-name: ico-bottom-close;
+      animation-duration: $midTime;
+    }
+
+    .ico-menu-middle {
+      animation-name: fade-in;
+      animation-duration: $midTime;
+    }
+  }
+}

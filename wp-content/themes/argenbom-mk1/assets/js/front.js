@@ -1,5 +1,6 @@
 /* eslint-disable no-new */
 import lzl from './modules/lazyload/native';
+import { menu } from './modules/menu/menu';
 __webpack_public_path__ = `${window.ARG.mainDomain}/dist/`;
 
 const settings_lzl = {
@@ -33,6 +34,22 @@ if (document.querySelector('#carrousel') !== null) {
         990: { items: 3 },
         1300: { items: 4 }
       }
+    });
+  });
+}
+
+if ('requestIdleCallback' in window) {
+  window.requestIdleCallback(() => {
+    menu({
+      bodyClass: 'menu-expanded',
+      trigger: '#header-menu-action'
+    }, 500);
+  });
+} else {
+  setTimeout(() => {
+    menu({
+      bodyClass: 'menu-expanded',
+      trigger: '#header-menu-action'
     });
   });
 }
