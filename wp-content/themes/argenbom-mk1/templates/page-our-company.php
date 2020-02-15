@@ -17,7 +17,7 @@ Template Post Type: page
           <?php if ($tmp): ?>
             <div class="our-company__item our-company__item-<?php echo $tmp['name']; ?>">
               <div class="our-company__acf-title uppercase bold"><?php echo $tmp['label']; ?></div>
-              <div class="our-company__acf-value"><?php echo nl2br($tmp['value']); ?></div>
+              <div class="our-company__acf-value"><?php echo $tmp['value']; ?></div>
             </div>
           <?php endif; ?>
         <?php endforeach; ?>
