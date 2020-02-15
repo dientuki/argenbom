@@ -28,8 +28,8 @@ Template Post Type: page
         <div class="our-company-location">
           <div class="our-company-location__deco"></div>
 
-          <div class="our-company-location-place">
-            <div class="our-company__acf-title bold uppercase">Donde estamos</div>
+          <div class="our-company-location-place uppercase">
+            <div class="our-company__acf-title bold">Donde estamos</div>
             <div class="our-company__acf-value"><?php echo $contact['value']; ?></div>
           </div>
 
