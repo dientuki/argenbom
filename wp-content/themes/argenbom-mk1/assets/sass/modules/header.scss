@@ -185,7 +185,7 @@
       }
 
       &__link {
-        margin: 0 rem(5);
+        margin: 0 rem(10);
         height: rem(30);
         line-height: rem(30);
 
@@ -204,9 +204,10 @@
       }
     }
     &.icoclose {
-      @include hide();
+      .header-menu__wrapper {
+        @include hide();
+      }
     }
-
   }
 }
 
