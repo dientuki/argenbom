@@ -24,7 +24,7 @@
 
       <header class="header">
         <div class="wrapper">
-          <a href="" class="header__logo"></a>
+          <a href="<?php echo get_home_url(); ?>" class="header__logo"></a>
           <?php wp_nav_menu( array(
               'container' => 'nav',
               'container_class' => 'header-menu__wrapper',
