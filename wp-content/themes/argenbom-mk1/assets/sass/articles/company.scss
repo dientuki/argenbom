@@ -7,6 +7,10 @@
   }
 
   &__acf {
+    &-title {
+      font-family: myriadpro-regular;
+    }
+
     &-value {
       font-family: myriadpro-light;
 
@@ -18,9 +22,8 @@
 
   &-location {
     position: relative;
-    padding-left: rem(190);
     display: flex;
-    padding-top: rem(62);
+    padding: rem(62) 0 rem(190) 0;
     justify-content: space-between;
     margin: 0 auto;
     width: calc(100% - #{rem(170)});
@@ -60,7 +63,11 @@
     flex-basis: 50%;
     position: relative;
     text-align: center;
-    padding: rem(55) rem(25) 0 rem(25);
+    padding: rem(55) rem(25) rem(40) rem(25);
+
+    img {
+      margin-top: rem(22);
+    }
 
     .our-company__acf {
       &-title {
