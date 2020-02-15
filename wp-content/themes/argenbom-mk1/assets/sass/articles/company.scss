@@ -153,6 +153,30 @@
         right: -50% !important;
       }
 
+      &:nth-child(3) {
+        &:before {
+          background: map-get($colors, "green");
+        }
+
+        .our-company {
+          &__acf-title {
+            color: map-get($colors, "blue");
+          }
+        }
+      }
+
+      &:last-child {
+        &:before {
+          background: map-get($colors, "blue");
+        }
+
+        .our-company {
+          &__acf-title {
+            color: map-get($colors, "green");
+          }
+        }
+      }
+
       .our-company__acf-value {
         max-width: rem(550);
         margin: 0 auto;
