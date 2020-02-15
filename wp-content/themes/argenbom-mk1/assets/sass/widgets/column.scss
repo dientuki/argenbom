@@ -1,0 +1,134 @@
+.widget-column {
+  background: map-get($colors, "blue");
+  color: map-get($colors, "white");
+  overflow-x: hidden;
+
+  &__article {
+    display: flex;
+
+    &:first-child {
+      position: relative;
+      padding-bottom: rem(1);
+      
+      &:before {
+        content: "";
+        position: absolute;
+        left: -50%;
+        height: rem(1);
+        background: map-get($colors, "grey");
+        bottom: 0;
+        width: 200%;
+      }
+    }
+  }
+
+  &__image {
+    flex-basis: (610%/1440) * 100;
+    position: relative;
+
+    &:before {
+      width: rem(150);
+      height: rem(150);
+      content: "";
+      background: map-get($colors, "green") no-repeat center center;
+      right: rem(-75);
+      top: 50%;
+      transform: translateY(-50%);
+      position: absolute;
+      z-index: 90;
+      border-radius: 100em;
+    }
+  }
+
+  &__productos {
+    &:before {
+      background-image: url("../images/prod.png");
+    }
+  }
+
+  &__nuestra-empresa {
+    &:before {
+      background-image: url("../images/nuestra_empresa.png");
+    }
+  }
+
+  &__content {
+    flex-basis: (830%/1440) * 100;
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__content-wrapper {
+    display: flex;
+    padding: 0 rem(115);
+    flex-wrap: wrap;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &__title,
+  &__text {
+    flex-basis: 100%;
+  }
+
+  &__title {
+    color: map-get($colors, "green");
+    font-size: rem(27);
+  }
+
+  &__text {
+    font-family: myriadpro-light;
+    font-size: rem(20);
+    margin: rem(5) 0 rem(10) 0;
+    @include clamp(3);
+  }
+}
+
+@media (max-width: em(900)) {
+  .widget-column {
+    &__article {
+      flex-wrap: wrap;
+    }
+
+    &__image,
+    &__content {
+      width: 100%;
+      flex-basis: 100%;
+    }
+
+    &__image {
+      &:before {
+        left: 0;
+        bottom: rem(-170);
+        top: auto;
+        transform: none;        
+      }
+    }
+
+    &__content {
+      margin: rem(20) 0;
+      min-height: rem(150);
+
+      &-wrapper {
+        position: static;
+        transform: none;
+        padding: 0 0 0 rem(170);
+      }
+    }
+  }
+}
+
+@media (min-width: em(899)) and (max-width: em(1200)) {
+  .widget-column {
+    &__image {
+      &:before {
+        @include hide();
+      }
+    }
+
+    &__content-wrapper {
+      padding: 0 rem(25);
+    }
+  }
+}
