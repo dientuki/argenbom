@@ -1,3 +1,16 @@
+.page-contact {
+  padding: rem(60) 0;
+  width: calc(100% - #{rem(80)});
+
+  & > p {
+    color: map-get($colors, "blue");
+    font-weight: map-get($font-weight, "bold");
+    text-transform: uppercase;
+    font-size: rem(22);
+    margin-bottom: rem(45);
+  }
+}
+
 .wpcf7 {
   label {
     @include hide();
@@ -5,8 +18,6 @@
 
   &-form {
     font-family: myriadpro-light;
-    padding: rem(60) 0;
-    width: calc(100% - #{rem(80)});
     margin: 0 auto;
   }
 
@@ -47,5 +58,35 @@
     &:first-child {
       margin-top: 0;
     }
+  }
+}
+
+@media (max-width: em(1340)) {
+  .form {
+    &-wrapper {
+      flex-wrap: wrap;
+      width: 100%;
+      max-width: rem(500);
+      margin: 0 auto;
+    }
+
+    &-left,
+    &-right {
+      width: 100%;
+    }
+
+    &-right {
+      margin-top: rem(40);
+    }
+  }
+
+  .page-contact > p {
+    text-align: center;
+  }
+}
+
+@media (max-width: em(1439)) {
+  .page-contact {
+    width: 100%;
   }
 }

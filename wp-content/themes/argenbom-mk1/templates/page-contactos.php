@@ -10,7 +10,9 @@ Template Post Type: page
   
   <main class="background-green">
     <div class="wrapper">
-      <?php the_content(); ?>
+      <div class="page-contact">
+        <?php the_content(); ?>
+      </div>
     <div>
   </main>
 
