@@ -4,3 +4,15 @@
   position: relative;
   height: 100%;
 }
+
+@media (max-width: em(768)) {
+  .wrapper {
+    width: calc(100% - #{rem(20)});
+  }
+}
+
+@media (max-width: em(1439)) {
+  .wrapper {
+    width: calc(100% - #{rem(40)});
+  }
+}
