@@ -9,6 +9,10 @@
   &__acf {
     &-value {
       font-family: myriadpro-light;
+
+      strong {
+        font-family: myriadpro-regular;
+      }
     }
   }
 
@@ -59,13 +63,15 @@
     .our-company__acf {
       &-title {
         margin-top: rem(92);
-        padding-top: rem(20);
+        padding-top: rem(28);
         color: map-get($colors, "green");
+        font-size: rem(22);
       }
 
       &-value {
         margin-top: rem(5);
         color: map-get($colors, "white");
+        font-size: rem(21);
       }
     }
 
