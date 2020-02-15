@@ -45,3 +45,63 @@
     }
   }
 }
+
+@media (max-width: em(470)) {
+  .article-service {
+    .more-info-email {
+      padding: 0 rem(11);
+      &:before {
+        display: inline-block;
+        position: static;
+        transform: none;
+        margin-right: 1rem;
+      }
+    }
+  }
+}
+
+@media (max-width: em(910)) {
+  .article-service {
+    &__content-wrapper {
+      flex-wrap: wrap;
+    }
+
+    &__content {
+      flex-grow: 2;
+      margin-left: 0;
+    }
+
+    &__imagen {
+      margin: 0 auto;
+    }
+
+    &__title {
+      width: auto;
+    }
+  }
+}
+
+@media (max-width: em(1130)) {
+  .article-service {
+    &__imagen {
+      $w: rem(175);
+      width: $w;
+      min-width: $w;
+      max-width: $w;
+    }
+  }
+}
+
+@media (min-width: em(911)) {
+  .article-service {
+    &__content {
+      margin-left: rem(35);
+    }
+  }
+}
+
+@media (max-width: em(1430)) {
+  .article-service__wrapper {
+    width: 100%;
+  }
+}

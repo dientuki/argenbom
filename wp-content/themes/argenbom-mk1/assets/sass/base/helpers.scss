@@ -106,7 +106,8 @@
 .more-info,
 .more-info-email {
   border: solid rem(1);
-  height: rem(30);
+  min-height: rem(30);
+  height: auto;
   line-height: rem(30);
   padding: 0 rem(22);
   border-radius: rem(9);
