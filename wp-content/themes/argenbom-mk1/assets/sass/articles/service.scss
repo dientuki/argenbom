@@ -46,21 +46,6 @@
   }
 }
 
-@media (max-width: em(470)) {
-  .article-service {
-    .more-info-email {
-      padding: 0 rem(11);
-
-      &:before {
-        display: inline-block;
-        position: static;
-        transform: none;
-        margin-right: 1rem;
-      }
-    }
-  }
-}
-
 @media (max-width: em(910)) {
   .article-service {
     &__content-wrapper {

@@ -26,7 +26,13 @@ if (document.querySelector('#carrousel') !== null) {
       items: 4,
       lazyload: true,
       loop: false,
-      nav: false
+      nav: false,
+      responsive: {
+        0: {items: 1},
+        728: { items: 2 },
+        990: { items: 3 },
+        1300: { items: 4 }
+      }
     });
   });
 }

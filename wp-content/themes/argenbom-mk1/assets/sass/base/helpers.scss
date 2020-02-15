@@ -187,3 +187,16 @@
     float: right;
   }
 }
+
+@media (max-width: em(470)) {
+  .more-info-email {
+    padding: 0 rem(11);
+
+    &:before {
+      display: inline-block;
+      position: static;
+      transform: none;
+      margin-right: 1rem;
+    }
+  }
+}
