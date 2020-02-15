@@ -56,6 +56,17 @@
       }
     }
 
+    &-action {
+      border: solid rem(2) map-get($colors, "green");
+      position: absolute;
+      right: 0;
+      width: rem(30);
+      height: rem(30);
+      top: rem(50);
+      border-radius: rem(5);
+      @include hide();
+    }
+
     &__link {
       $transition: .5s ease;
       display: inline-block;
@@ -124,6 +135,47 @@
         width: 100%;
         padding: rem(10) 0;
       }
+    }
+  }
+}
+
+@media (max-width: em(830)) {
+  .header {
+    &__logo {
+      left: 0;
+    }
+
+    &-menu {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+
+      &__wrapper {
+        left: 0;
+        height: auto;
+        bottom: rem(30);
+      }
+
+      &-action {
+        display: block;
+        visibility: visible;
+      }
+
+      &__item {
+        float: none;
+        margin: 0;
+      }
+    }
+  }
+}
+
+@media (min-width: em(831)) and (max-width: em(1100)) {
+  .header-menu {
+    &__wrapper {
+      height: rem(70);
+      left: 0;
+      display: flex;
+      justify-content: center;
     }
   }
 }

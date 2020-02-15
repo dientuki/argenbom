@@ -32,7 +32,9 @@
               'menu_class' => 'header-menu',
               'theme_location'=>'primary'
             )); ?>        
+            <div class="header-menu-action"></div>
         </div>
+        
       </header>
 
     <?php endif; ?>  
