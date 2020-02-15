@@ -67,6 +67,8 @@
 
     img {
       margin-top: rem(22);
+      max-width: rem(533);
+      height: auto;
     }
 
     .our-company__acf {
@@ -136,6 +138,25 @@
     &:nth-child(even) {
       &:before {
         left: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: em(1210)) {
+  .our-company {
+    &__item {
+      flex-basis: 100%;
+
+      &:before {
+        left: -50% !important;
+        right: -50% !important;
+      }
+
+      .our-company__acf-value {
+        max-width: rem(550);
+        margin: 0 auto;
+        width: 100%;
       }
     }
   }
