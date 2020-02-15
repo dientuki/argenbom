@@ -93,6 +93,12 @@
       top: rem(55);
     }
 
+    &-company {
+      &:after {
+        //background-image: ;
+      }
+    }
+
     &:before {
       width: 200%;
       height: 100%;

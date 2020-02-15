@@ -20,7 +20,7 @@
     position: absolute;
     left: rem(100);
     top: rem(27);
-    background: map-get($colors, "white");
+    background: map-get($colors, "white") center center no-repeat url("../images/logo.png");
     border-radius: 100rem;
     overflow: hidden;
     box-shadow: 0 0 rem(10) rem(1) rgba(map-get($colors, "black"), 1);
