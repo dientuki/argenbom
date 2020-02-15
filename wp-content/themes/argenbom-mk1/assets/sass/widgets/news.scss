@@ -1,0 +1,51 @@
+
+
+.widget-news {
+  padding: rem(32) 0 rem(52) 0;
+
+  &__container {
+    width: 100%;
+    max-width: rem(990);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__deco {
+    min-width: rem(150);
+    height: rem(150);
+    background: map-get($colors, "green") center center no-repeat url("../images/novedades.png");
+    border-radius: 10rem;
+  }
+
+  &__text {
+    padding: 0 rem(120) 0 rem(40);
+    flex-grow: 1;
+    font-family: myriadpro-light;
+  }
+
+  &__more {
+    min-width: rem(180);
+    text-align: right;
+  }
+
+  &__title {
+    color: map-get($colors, "green");
+    font-size: rem(27);
+    margin-bottom: rem(5);
+  }
+}
+
+@media (max-width: em(768)) {
+  .widget-news {
+    &__text {
+      padding: 0 rem(10) 0 rem(20);
+    }
+
+    &__more {
+      min-width: rem(94);
+      flex-basis: rem(94);
+    }
+  }
+}
