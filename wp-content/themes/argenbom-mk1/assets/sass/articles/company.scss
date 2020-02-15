@@ -12,6 +12,43 @@
     }
   }
 
+  &-location {
+    position: relative;
+    padding-left: rem(190);
+    display: flex;
+    padding-top: rem(62);
+    justify-content: space-between;
+
+    .our-company__acf-title {
+      color: map-get($colors, "green");
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: rem(50);
+      width: rem(150);
+      height: rem(150);
+      border-radius: 10rem;
+      background: map-get($colors, "green") no-repeat center center;
+    }
+
+    &-place {
+      width: rem(400);
+    }
+
+    &-iframe {
+      width: rem(570);
+      height: rem(460);
+
+      iframe {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
   &__item {
     width: 50%;
     flex-basis: 50%;
@@ -23,6 +60,7 @@
       &-title {
         margin-top: rem(92);
         padding-top: rem(20);
+        color: map-get($colors, "green");
       }
 
       &-value {
@@ -77,39 +115,6 @@
     &:nth-child(even) {
       &:before {
         left: 0;
-      }
-    }
-  }
-
-  &-location {
-    position: relative;
-    padding-left: rem(190);
-    display: flex;
-    padding-top: rem(62);
-    justify-content: space-between;
-
-    &:before {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: rem(50);
-      width: rem(150);
-      height: rem(150);
-      border-radius: 10rem;
-      background: map-get($colors, "green") no-repeat center center;
-    }
-
-    &-place {
-      width: rem(400);
-    }
-
-    &-iframe {
-      width: rem(570);
-      height: rem(460);
-
-      iframe {
-        width: 100%;
-        height: 100%;
       }
     }
   }
