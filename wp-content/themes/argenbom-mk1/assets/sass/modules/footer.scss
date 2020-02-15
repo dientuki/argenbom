@@ -64,3 +64,31 @@
     }
   }
 }
+
+@media (max-width: em(1120)) {
+  .footer {
+    height: auto;
+    padding: rem(20) 0;
+
+    &__container {
+      flex-wrap: wrap;
+    }
+
+    &__contact-info {
+      flex-basis: 100%;
+    }
+
+    .menu-social {
+      &__wrapper {
+        margin-top: rem(10);
+        flex-basis: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: em(1439)) {
+  .footer__container {
+    width: 100%;
+  }
+}
