@@ -140,6 +140,24 @@ $space: 45;
   }
 }
 
+@media (max-width: em(727)) {
+  .carrousel {
+    &-wrapper {
+      width: 100%;
+    }
+
+    &-controls {
+      &-prev {
+        left: rem(30);
+      }
+
+      &-next {
+        right: rem(30);
+      }
+    }
+  }
+}
+
 @media (max-width: em(1440)) {
   .carrousel {
     &-wrapper {

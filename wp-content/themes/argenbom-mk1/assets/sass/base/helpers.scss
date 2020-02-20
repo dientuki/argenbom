@@ -164,7 +164,10 @@
     transform: translateY(-50%);
     width: rem(22);
     height: rem(15);
-    background: map-get($colors, "green");
+    background: url("../images/email.png") center center no-repeat;
+    background-size: 100%;
+    // https://codepen.io/sosuke/pen/Pjoqqp
+    filter: invert(55%) sepia(6%) saturate(4055%) hue-rotate(124deg) brightness(103%) contrast(80%);
   }
 }
 
