@@ -140,6 +140,14 @@ $space: 45;
   }
 }
 
+@media (max-width: em(1440)) {
+  .carrousel {
+    &-wrapper {
+      width: calc(100% - #{rem(140)});
+    }
+  }
+}
+
 @media (max-width: em(727)) {
   .carrousel {
     &-wrapper {
@@ -154,14 +162,6 @@ $space: 45;
       &-next {
         right: rem(30);
       }
-    }
-  }
-}
-
-@media (max-width: em(1440)) {
-  .carrousel {
-    &-wrapper {
-      width: calc(100% - #{rem(140)});
     }
   }
 }
