@@ -73,12 +73,16 @@
 
 @media (max-width: em(1440)) {
   .listview {
-    &-products {
-      width: calc(100% - #{rem(140)});
-    }
-
     &-services__wrapper {
       justify-content: center;
+    }
+  }
+}
+
+@media (min-width: em(728)) and (max-width: em(1440)) {
+  .listview {
+    &-products {
+      width: calc(100% - #{rem(140)});
     }
   }
 }
