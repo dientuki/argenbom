@@ -71,6 +71,14 @@
   position: relative;
 }
 
+@media (max-width: em(727)) {
+  .listview {
+    &-products {
+      width: 100%;
+    }    
+  }
+}
+
 @media (max-width: em(1440)) {
   .listview {
     &-products {
