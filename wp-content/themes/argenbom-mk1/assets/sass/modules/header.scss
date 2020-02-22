@@ -33,7 +33,7 @@
     &__wrapper {
       height: rem(120);
       position: absolute;
-      right: 0;
+      right: rem(70);
       bottom: 0;
     }
 
@@ -103,12 +103,16 @@
     }
   }
 
-  &-menu > .header-menu__item > .header-menu__link:hover {
-    text-shadow: rem(1) rem(1) 0 map-get($colors, "blue");
+  &-menu > .header-menu__item > .header-menu__link {
+    font-size: rem(21);
 
-    &:before {
-      width: 100%;
-    }
+    &:hover {
+      text-shadow: rem(1) rem(1) 0 map-get($colors, "blue");
+
+      &:before {
+        width: 100%;
+      }
+    }    
   }
 
   /* stylelint-disable no-descending-specificity */
@@ -142,7 +146,7 @@
   }
 }
 
-@media (max-width: em(830)) {
+@media (max-width: em(999)) {
   .header {
     height: rem(190);
 
@@ -214,7 +218,7 @@
   }
 }
 
-@media (min-width: em(831)) and (max-width: em(1100)) {
+@media (min-width: em(1000)) and (max-width: em(1250)) {
   .header-menu {
     &__wrapper {
       height: rem(70);
