@@ -10,7 +10,7 @@ $active = true;
 
 <main>
 
-  <?php $products = new WP_Query( array('post_type' => 'productos', 'orderby' => 'title', 'order'   => 'DESC') ) ;?>
+  <?php $products = new WP_Query( array('post_type' => 'productos', 'orderby' => 'title', 'order'   => 'DESC', 'posts_per_page' => -1) ) ;?>
 
   <?php if ( $products->have_posts() ):?>
     <div class="carrousel background-blue">
