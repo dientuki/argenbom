@@ -20,7 +20,7 @@ Template Post Type: servicios
         <div class="listview-services__wrapper">
           <?php while ( $services->have_posts() ): $services->the_post(); ?>
             <article class="article-service">
-              <figure class="aspect-service-preview">
+              <figure class="aspect-1-1">
                 <img data-original="<?php echo get_the_post_thumbnail_url(get_the_ID()) ?>" class="lzl" />
               </figure>            
               <h1 class="article-service__listview-title"><?php the_title(); ?></h1>
